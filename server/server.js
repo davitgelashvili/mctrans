@@ -43,10 +43,13 @@ app.listen(PORT, () => {
     console.log(`სერვერი აჭრილია პორტზე ${PORT}`);
 });
 
+const MONGO_URI = 'mongodb+srv://datto1313:Kaikaco123.@cluster0.ondghzb.mongodb.net/mctrans?retryWrites=true&w=majority';
+
+
 console.log(111111)
-console.log(process.env.MONGODB_URL)
+console.log(MONGO_URI)
 mongoose
-    .connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(MONGO_URI)
     .then(() => {
         console.log("Connected to MongoDB");
     })
