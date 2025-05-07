@@ -43,10 +43,10 @@ app.listen(PORT, () => {
     console.log(`სერვერი აჭრილია პორტზე ${PORT}`);
 });
 
+console.log(111111)
 console.log(process.env.MONGODB_URL)
-
 mongoose
-    .connect(process.env.MONGODB_URL)
+    .connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("Connected to MongoDB");
     })
