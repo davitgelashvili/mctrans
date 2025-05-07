@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 5001;
 
 // დამატებული პროდუქციის დომენი
 const allowedOrigins = [
-    'http://localhost:3001',
     'http://localhost:3000',
-    'https://gelashvili.me'
+    'http://localhost:5001',
+    'https://mctrans.gelashvili.site'
 ];
 
 const corsOptions = {
