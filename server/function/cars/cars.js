@@ -21,7 +21,7 @@ const getCars = async (req, res) => {
     });
   } catch (error) {
     console.error(error);
-    return res.status(500).send("მოხდა შეცდომა");
+    return res.status(500).send(`${error} - მოხდა შეცდომა`);
   }
 };
 
