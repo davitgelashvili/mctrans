@@ -45,9 +45,6 @@ app.listen(PORT, () => {
 
 const MONGO_URL = 'mongodb+srv://datto1313:Kaikaco123.@cluster0.ondghzb.mongodb.net/mctrans?retryWrites=true&w=majority';
 
-
-console.log(111111)
-console.log(MONGO_URL)
 mongoose
     .connect(MONGO_URL)
     .then(() => {
