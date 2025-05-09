@@ -43,12 +43,12 @@ app.listen(PORT, () => {
     console.log(`სერვერი აჭრილია პორტზე ${PORT}`);
 });
 
-// const MONGO_URL = 'mongodb+srv://datto1313:Kaikaco123.@cluster0.ondghzb.mongodb.net/mctrans?retryWrites=true&w=majority';
-const uri = 'mongodb://datto1313:Kaikaco123.@ac-u7noaaf-shard-00-00.ondghzb.mongodb.net:27017,ac-u7noaaf-shard-00-01.ondghzb.mongodb.net:27017,ac-u7noaaf-shard-00-02.ondghzb.mongodb.net:27017/mctrans?ssl=true&replicaSet=atlas-1v0cz5-shard-0&authSource=admin&retryWrites=true&w=majority';
+const MONGO_URL = 'mongodb+srv://datto1313:Kaikaco123.@cluster0.ondghzb.mongodb.net/mctrans?retryWrites=true&w=majority';
+// const uri = 'mongodb://datto1313:Kaikaco123.@ac-u7noaaf-shard-00-00.ondghzb.mongodb.net:27017,ac-u7noaaf-shard-00-01.ondghzb.mongodb.net:27017,ac-u7noaaf-shard-00-02.ondghzb.mongodb.net:27017/mctrans?ssl=true&replicaSet=atlas-1v0cz5-shard-0&authSource=admin&retryWrites=true&w=majority';
 
 
 mongoose
-    .connect(uri)
+    .connect(MONGO_URL)
     .then(() => {
         console.log("Connected to MongoDB");
     })
