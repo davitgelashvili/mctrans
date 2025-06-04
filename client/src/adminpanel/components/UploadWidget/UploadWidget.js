@@ -3,7 +3,7 @@ import axios from 'axios';
 import styles from './UploadWidget.module.scss';
 import Loading from '../Loading/Loading';
 
-export default function UploadWidget({ setData, title, value }) {
+export default function UploadWidget({ setData, title, value, name = 'cover' }) {
     const [imageUrl, setImageUrl] = useState('');
     const [load, setLoad] = useState(false);
 
@@ -33,7 +33,7 @@ export default function UploadWidget({ setData, title, value }) {
 
             setData((prev) => ({
                 ...prev,
-                cover: res.data.url, // ახალ URL-ის შენახვა `cover`-ში
+                [name]: res.data.url, // ახალ URL-ის შენახვა `cover`-ში
             }));
             setLoad(false);
         } catch (err) {

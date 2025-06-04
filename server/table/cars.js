@@ -12,7 +12,7 @@ const CarsSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    title: {
+    name: {
         type: String,
         required: false,
     },

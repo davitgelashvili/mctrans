@@ -1,0 +1,43 @@
+.slider {
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cover {
+    background-image: url('./../../assets/images/slider.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.body {
+    display: block;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.btns{
+    display: flex;
+
+    button {
+        margin-right: 30px;
+    }
+}
+
+.btn {
+    padding: 19px 26px;
+    color: #fff;
+
+    &__white {
+        color: #050B20;
+    }
+}

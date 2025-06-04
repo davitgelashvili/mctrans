@@ -1,0 +1,28 @@
+.requestbox {
+    padding: 60px 0;
+
+    &__title {
+        font-size: 17px;
+    }
+    &__desc {
+        font-size: 13px;
+    }
+    
+    &__item {
+        padding: 50px 80px;
+        border-radius: 12px;
+    
+        button {
+            font-size: 14px;
+            color: #fff;
+
+            p {
+                padding: 22px 60px;
+            }
+    
+            .dark {
+                color: #fff;
+            }
+        }
+    }
+}

@@ -15,6 +15,16 @@ export default function Sidebar() {
             title: 'მანქანები',
             url: '/adminpanel/cars'
         },
+        {
+            _id: '2352gfef',
+            title: 'თანამშრომლები',
+            url: '/adminpanel/teams'
+        },
+        {
+            _id: '2352gfef',
+            title: 'ბლოგი',
+            url: '/adminpanel/blogs'
+        },
     ]
 
     function open(_id) {

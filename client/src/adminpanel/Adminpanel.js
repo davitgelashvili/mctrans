@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router'
 import CarsPage from './page/cars/cars'
-import AboutPage from './page/about/about'
 import Sidebar from './components/Sidebar/Sidebar'
+import TeamPage from './page/team'
+import BlogPage from './page/blog'
 
 export default function Adminpanel() {
     const [isLogin, setIsLogin] = useState(true)
@@ -22,7 +23,8 @@ export default function Adminpanel() {
                         <Routes>
                             <Route path='/' element={<h1>dashboard</h1>} />
                             <Route path='/cars*' element={<CarsPage />} />
-                            <Route path='/about*' element={<AboutPage />} />
+                            <Route path='/teams*' element={<TeamPage />} />
+                            <Route path='/blogs*' element={<BlogPage />} />
                         </Routes>
                     </div>
                 )}

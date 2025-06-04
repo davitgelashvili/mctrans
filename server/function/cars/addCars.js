@@ -1,27 +1,14 @@
 const table = require("../../table/cars");
 
 const addCars = async (req, res) => {
-    try {
-        const { createDate, title, body, cover, fwd, kolofi, dzravi, price } = req.body;
-
-        const newCars = new table({
-            createDate,
-            title,
-            price,
-            body,
-            cover,
-            fwd,
-            kolofi,
-            dzravi
-        });
-
-        const savedCars = await newCars.save();
-
-        return res.status(200).send(savedCars);
-    } catch (error) {
-        console.error("Cars save error:", error);
-        return res.status(500).send("მოხდა შეცდომა ბლოგის დამატებისას");
-    }
+  try {
+    const newCars = new table(req.body);
+    await newCars.save();
+    return res.status(201).json(newCars);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send("გუნდის დამატება ვერ მოხერხდა");
+  }
 };
 
 module.exports = { addCars };

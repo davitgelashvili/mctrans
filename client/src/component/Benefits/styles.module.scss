@@ -1,0 +1,16 @@
+.benefits {
+    overflow-x: hidden;
+    &__container {
+        width: calc(100% + 200px);
+        padding: 100px 0;
+        margin-left: -100px;
+        background-color: #405FF2;
+        border-radius: 16px;
+    }
+}
+
+
+.item {
+    background-color: #fff;
+    border-radius: 8px;
+}

@@ -1,8 +1,8 @@
 import React from 'react'
-import CarsList from '../../component/CarsList/CarsList'
+import { LoungeCars } from '../../component/LoungeCars'
 
 export default function CarsPage() {
   return (
-    <CarsList />
+    <LoungeCars />
   )
 }
