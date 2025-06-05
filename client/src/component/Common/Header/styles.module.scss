@@ -73,13 +73,15 @@
     line-height: 44px;
 
     &:hover {
-            color: #405FF2;
-        }
+        color: #405FF2;
+    }
 }
 
 .nav_layout {
     position: absolute;
-    left: 268px;
+    width: 785px;
+    height: 26px;
+    left: 408px;
     padding-top: 39px;
     padding-bottom: 39px;
 }
