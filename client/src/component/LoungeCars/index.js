@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import { CardItem } from '../CardItem';
 import { Section } from '../Common/Section';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 
 export const LoungeCars = () => {
     const [data, setData] = useState();
@@ -29,19 +33,53 @@ export const LoungeCars = () => {
         fetchData();
     }, [params]);
 
+    const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,   
+    slidesToScroll: 4, 
+    rows: 2,   
+    centerPadding: '20px',     
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          rows: 1,
+          slidesToScroll: 2, 
+          centerPadding: '0', 
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          rows: 1,
+          slidesToScroll: 1, 
+          centerPadding: '0', 
+        }
+      }
+    ]
+  };
+  
+
     return (
         <Section smollTitle={'მანქანები'} background>
             <div className={`${styles['cars']}`}>
                 <div className='container'>
                     {!data && <Loading />}
-                    <div className='row'>
+                    <div className={styles.slider_container}>
+                        <Slider {...settings}>
                         {data?.map((item) => {
                             return (
-                                <div className='col-6 col-lg-3 d-flex' key={item._id}>
-                                    <CardItem item={item} name="cars"/>
+                                <div  key={item._id}>
+                                        <div className={styles.slider_content}>
+                                            <CardItem item={item} name="cars" className={styles.carditem}/>
+                                        </div>
                                 </div>
                             )
                         })}
+                        </Slider>
                     </div>
                 </div>
             </div>
