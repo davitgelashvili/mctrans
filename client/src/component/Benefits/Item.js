@@ -4,11 +4,10 @@ import styles from './styles.module.scss'
 export default function Item({ item }) {
     return (
         <div className={styles.item}>
-            <figure className={styles.item__icon}>
-                <img src='' alt='' />
-            </figure>
-            <h3 className={styles.item__title}>title</h3>
+            <h1>GREAT</h1>
+            <img src='starts' alt='' />
             <p>desc</p>
+            <img src='logo' alt='' />
         </div>
     )
 }

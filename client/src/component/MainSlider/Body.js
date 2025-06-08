@@ -22,7 +22,10 @@ export default function Body() {
                 </CustomButton>
             </div>
             <div>
-                list
+                <li>erti</li>
+                <li>ori</li>
+                <li>sami</li>
+                <li>erti</li>
             </div>
         </div>
     )

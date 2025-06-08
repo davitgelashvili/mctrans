@@ -7,12 +7,10 @@ import { Link } from 'react-router-dom'
 export const Header = () => {
     return (
         <header className={styles.header}>
-            <div className={styles.container}>
+            <div className='container-fluid'>
                 <div className={styles.header__content}>
                     <Logo />
                     <Menu />
-                </div>
-                <div className={styles.header__right}>
                     <button className={styles.header__submit}>
                         <p className={styles.header__element}>
                             მოთხოვნის გაგზავნა
