@@ -37,7 +37,7 @@ export const LastBlog = () => {
                     <div className='row'>
                         {data?.map((item) => {
                             return (
-                                <div className='col-6 col-lg-3 d-flex' key={item._id}>
+                                <div className='col-12 col-md-6 col-lg-4 d-flex' key={item._id}>
                                     <CardItem item={item} name="blogs"/>
                                 </div>
                             )

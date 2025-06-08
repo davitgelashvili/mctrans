@@ -7,12 +7,12 @@ export const CardItem = ({ item, name }) => {
             <figure className={styles.card__cover}>
                 <img src={item?.cover} alt='ტესტ' />
             </figure>
-            {name === 'cars' && <h1>{item?.title}</h1>}
-            {name === 'teams' && <h1 style={{ backgroundColor: 'blue' }}>{item?.name}</h1>}
-            {name === 'blogs' && <h1>{item?.title?.ka}</h1>}
+            {name === 'cars' && <h1 className={styles.card__title}>{item?.title}</h1>}
+            {name === 'teams' && <h1 className={styles.card__title} style={{ backgroundColor: '#CEE1F2' }}>{item?.name}</h1>}
+            {name === 'blogs' && <h1 className={styles.card__title}>{item?.title?.ka}</h1>}
             <div className={styles.card__body}>
                 {/* blog description */}
-                {item?.desc && <p>{item?.desc?.ka}</p>}
+                {item?.desc && `${item?.desc?.ka}`}
                 {item?.location && <p>{item?.location}</p>}
                 {item?.location && <p>sale@mctrans.ge</p>}
                 {/* car */}

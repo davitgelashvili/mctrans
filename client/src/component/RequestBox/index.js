@@ -3,13 +3,14 @@ import styles from './styles.module.scss'
 import Box from './Box'
 import { CustomButton } from '../Common/CustomButton'
 import { Section } from '../Common/Section'
+import { Link } from 'react-router-dom'
 
 export const RequestBox = () => {
     return (
         <Section>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-6'>
+                    <div className='col-lg-6'>
                         <Box
                             color={'#E9F2FF'}
                             title={'ეძებ ახალ მანქანას ? '}
@@ -17,11 +18,13 @@ export const RequestBox = () => {
                             icon={'test'}
                         >
                             <CustomButton>
-                                <p>გაგზავნა</p>
+                                <Link to={'/test'} className={''}>
+                                გაგზავნა
+                                </Link>
                             </CustomButton>
                         </Box>
                     </div>
-                    <div className='col-6'>
+                    <div className='col-lg-6'>
                         <Box
                             color={'#FFE9F3'}
                             title={'გახდი ჩვენი დილერი'}
@@ -29,7 +32,9 @@ export const RequestBox = () => {
                             icon={'test'}
                         >
                             <CustomButton dark>
-                                <p className={styles.dark}>გაგზავნა</p>
+                                <Link to={'/test'} className={''}>
+                                გაგზავნა
+                                </Link>
                             </CustomButton>
                         </Box>
                     </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Menu() {
   return (
-    <ul className={styles.nav_layout}>
+    <ul className={styles.header__menu}>
         <li className={styles.nav_item}>
             მთავარი
         </li>
@@ -12,13 +12,13 @@ export default function Menu() {
           სიახლეები
         </li >
         <li className={styles.nav_item}>
-          MS Trans ლაუნჯი
+          ლაუნჯი
         </li>
         <li className={styles.nav_item}>
           კატალოგები
         </li>
         <li className={styles.nav_item}>
-          გაყიდვების გუნდი
+          გუნდი
         </li>
         <li className={styles.nav_item}>
           განბაჟება

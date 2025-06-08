@@ -4,7 +4,6 @@
     align-items: center;
     background-color: #405FF2;
     border-radius: 12px;
-    overflow: hidden;
     border: none;
     padding: 0;
 
@@ -18,11 +17,13 @@
         border: 1px solid #050B20
     }
 
-    p {
+    p,a {
         background-color: transparent;
         outline: none;
         cursor: pointer;
         border: none;
         margin: 0;
+        text-decoration: none;
+        display: block;
     }
 }
