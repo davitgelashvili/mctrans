@@ -8,6 +8,8 @@ import { Section } from '../Common/Section';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 
 export const LoungeCars = () => {
@@ -33,16 +35,43 @@ export const LoungeCars = () => {
         fetchData();
     }, [params]);
 
+    const PrevArrow = ({ onClick }) => (
+        <button
+            className="btn btn-outline-primary me-2 rounded-circle shadow-sm"
+            onClick={onClick}
+            style={{ position: "absolute", left: -30, top: "50%", zIndex: 1, borderRadius: "50%", display: "flex",
+                justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
+                transition: "background-color 0.3s ease", border: "none"
+            }}
+        >
+            <MdKeyboardArrowLeft />
+        </button>
+    );
+
+    const NextArrow = ({ onClick }) => (
+        <button
+            className=""
+            onClick={onClick}
+            style={{ position: "absolute", right: -30, top: "50%", zIndex: 1, borderRadius: "100%", display: "flex",
+                justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
+                transition: "background-color 0.3s ease", border: "none"
+            }}
+        >
+            <MdKeyboardArrowRight />
+        </button>
+    );
+
+
     const settings = {
         infinite: true,
-        dots: true,
         arrows: true,
         centerPadding: '60px',
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
         rows: 2,
-        centerPadding: '20px',
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 1024,
@@ -60,7 +89,6 @@ export const LoungeCars = () => {
         ]
     };
 
-
     return (
         <Section smollTitle={'მანქანები'} background>
             <div className={`${styles['cars']}`}>
@@ -69,9 +97,11 @@ export const LoungeCars = () => {
                     <Slider {...settings}>
                         {data?.map((item) => {
                             return (
-                                <div>
-                                    <div key={item._id} >
-                                        <CardItem item={item} name="cars" className={styles.carditem} />
+                                <div key={item._id} >
+                                    <div className='p-2'>
+                                        <div className='bg-light p-2 border rounded'>
+                                            <CardItem item={item} name="cars" />
+                                        </div>
                                     </div>
                                 </div>
                             )

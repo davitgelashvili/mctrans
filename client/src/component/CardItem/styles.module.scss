@@ -3,6 +3,7 @@
     border-radius: 16px;
     border: 1px solid rgba(#33434D, 0.11);
     overflow: hidden;
+    //font-family: 'MS Sans Serif', sans-serif;
 
     &__cover {
         width: 100%;
@@ -39,4 +40,20 @@
     justify-content: space-around;
     border-top: 1px solid rgba(#33434D, 0.11);
     border-bottom: 1px solid rgba(#33434D, 0.11);
+}
+
+.btn {
+    &__link {
+        padding: 14px 25px;
+        text-decoration: none;
+        color: #fff;
+        text-wrap-mode: nowrap;
+    }
+}
+
+.icontext {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  justify-content: center;
 }

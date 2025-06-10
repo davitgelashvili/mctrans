@@ -1,5 +1,9 @@
 import React from 'react'
 import styles from './styles.module.scss'
+import { CustomButton } from '../Common/CustomButton'
+import { Link } from 'react-router-dom'
+import pin from "../../assets/icons/pin.svg"
+import post from "../../assets/icons/post.svg"
 
 export const CardItem = ({ item, name }) => {
     return (
@@ -13,8 +17,15 @@ export const CardItem = ({ item, name }) => {
             <div className={styles.card__body}>
                 {/* blog description */}
                 {item?.desc && `${item?.desc?.ka}`}
-                {item?.location && <p>{item?.location}</p>}
-                {item?.location && <p>sale@mctrans.ge</p>}
+                {item?.location && <div className={styles.icontext}><img src={pin} alt='pin' /><p>{item?.location}</p></div>}
+                {item?.location && <div className={styles.icontext}><img src={post} alt='pin' /><p>sale@mctrans.ge</p></div>}
+                {item?.location && <CustomButton >
+                    <Link className={styles['btn__link']} style={{ width: 205, height: 5}}>
+                    <div className='d-flex justify-content-center align-items-center'>
+                        <p style={{ position: "fixed"}}>მოგვწერეთ</p>
+                    </div>                       
+                    </Link>
+                </CustomButton>}
                 {/* car */}
                 {item?.fwd && (
                     <div className={styles.cardetail}>
