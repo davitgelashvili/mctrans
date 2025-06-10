@@ -69,8 +69,10 @@ export const LoungeCars = () => {
                     <Slider {...settings}>
                         {data?.map((item) => {
                             return (
-                                <div  key={item._id} >
-                                    <CardItem item={item} name="cars" className={styles.carditem} />
+                                <div>
+                                    <div key={item._id} >
+                                        <CardItem item={item} name="cars" className={styles.carditem} />
+                                    </div>
                                 </div>
                             )
                         })}
