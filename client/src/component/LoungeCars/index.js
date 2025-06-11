@@ -39,7 +39,7 @@ export const LoungeCars = () => {
         <button
             className="btn btn-outline-primary me-2 rounded-circle shadow-sm"
             onClick={onClick}
-            style={{ position: "absolute", left: -30, top: "50%", zIndex: 1, borderRadius: "50%", display: "flex",
+            style={{ position: "absolute", left: -20, top: "49%", zIndex: 1, borderRadius: "50%", display: "flex",
                 justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
                 transition: "background-color 0.3s ease", border: "none"
             }}
@@ -52,7 +52,7 @@ export const LoungeCars = () => {
         <button
             className=""
             onClick={onClick}
-            style={{ position: "absolute", right: -30, top: "50%", zIndex: 1, borderRadius: "100%", display: "flex",
+            style={{ position: "absolute", right: -20, top: "49%", zIndex: 1, borderRadius: "100%", display: "flex",
                 justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
                 transition: "background-color 0.3s ease", border: "none"
             }}
