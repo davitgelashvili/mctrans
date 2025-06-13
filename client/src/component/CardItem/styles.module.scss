@@ -57,3 +57,25 @@
   gap: 8px; 
   justify-content: center;
 }
+
+.iconMid {
+  display: grid;
+  place-items: center;
+}
+
+.Linkcontainer {
+  position: relative; // makes child absolute relative to this
+
+  .cornerlink {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    color: #405FF2;
+    border-radius: 5px;
+    text-decoration: underline;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+}

@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom'
 import pin from "../../assets/icons/pin.svg"
 import post from "../../assets/icons/post.svg"
 import person from "../../assets/icons/person.svg"
+import vector from "../../assets/icons/Vector.svg"
+import isari from "../../assets/icons/isari.svg"
+import petrol from "../../assets/icons/petrol.svg"
+import kutxis from "../../assets/icons/kutxis.svg"
+
 
 export const CardItem = ({ item, name }) => {
     return (
@@ -24,7 +29,7 @@ export const CardItem = ({ item, name }) => {
                 {item?.location && <div className={styles.icontext}><img src={pin} alt='pin' /><p>{item?.location}</p></div>}
                 {item?.location && <div className={styles.icontext}><img src={post} alt='post' /><p>sale@mctrans.ge</p></div>}
                 {item?.location && <CustomButton >
-                    <Link className={styles['btn__link']} style={{ width: 205, height: 5 }}>
+                    <Link to="/test" className={styles['btn__link']} style={{ width: 205, height: 5 }}>
                         <div className='d-flex justify-content-center align-items-center'>
                             <p style={{ position: "fixed" }}>მოგვწერეთ</p>
                         </div>
@@ -34,13 +39,13 @@ export const CardItem = ({ item, name }) => {
                 {item?.fwd && (
                     <div className={styles.cardetail}>
                         <div>
-                            <p>{item?.fwd}</p>
+                            <p><div className={styles.iconMid}><img src={isari} alt='isari' /></div>{item?.fwd}</p>
+                        </div>
+                        <div >
+                            <p><div className={styles.iconMid}><img src={vector} alt='vector' /></div>{item?.kolofi}</p>
                         </div>
                         <div>
-                            <p>{item?.kolofi}</p>
-                        </div>
-                        <div>
-                            <p>{item?.dzravi}</p>
+                            <p><div className={styles.iconMid}><img src={petrol} alt='petrol' /></div>{item?.dzravi}</p>
                         </div>
                     </div>
                 )}
@@ -49,6 +54,14 @@ export const CardItem = ({ item, name }) => {
                         <p>
                             {item?.price}
                         </p>
+                    </div>
+                )}
+                {item?.price && (
+                    <div className={styles.Linkcontainer}>
+                        <Link to="/test" className={styles.cornerlink}>
+                            View Details<img src={kutxis} alt='kutxis' style={{ position: "absolute", display: "inline-flex", 
+                                marginLeft: 5, width: 13, height: 13, marginTop: 3}}/>
+                        </Link>
                     </div>
                 )}
             </div>
