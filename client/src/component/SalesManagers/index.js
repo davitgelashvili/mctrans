@@ -77,6 +77,7 @@ export const SalesManagers = () => {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
+                    rows: 1
                 }
             },
             {
@@ -84,6 +85,8 @@ export const SalesManagers = () => {
                 settings: {
                     slidesToShow: 2,
                     rows: 1,
+                    arrows: false,
+                    dots: true,
                 }
             }
         ]

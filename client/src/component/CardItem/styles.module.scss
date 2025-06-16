@@ -40,6 +40,7 @@
     justify-content: space-around;
     border-top: 1px solid rgba(#33434D, 0.11);
     border-bottom: 1px solid rgba(#33434D, 0.11);
+    gap: 15px;
 }
 
 .btn {
@@ -48,7 +49,24 @@
         text-decoration: none;
         color: #fff;
         text-wrap-mode: nowrap;
+        width: 185px;
     }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    &__link {
+        width: 120px;
+    }
+ }
+}
+
+@media (max-width: 1200px) {
+  .btn {
+    &__link {
+        width: 120px;
+    }
+ }
 }
 
 .icontext {

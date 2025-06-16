@@ -28,13 +28,13 @@ export const CardItem = ({ item, name }) => {
                 {item?.desc && `${item?.desc?.ka}`}
                 {item?.location && <div className={styles.icontext}><img src={pin} alt='pin' /><p>{item?.location}</p></div>}
                 {item?.location && <div className={styles.icontext}><img src={post} alt='post' /><p>sale@mctrans.ge</p></div>}
-                {item?.location && <CustomButton >
-                    <Link to="/test" className={styles['btn__link']} style={{ width: 205, height: 5 }}>
+                {item?.location && <div className="d-flex justify-content-center align-items-center"><CustomButton >
+                    <Link to="/test" className={styles['btn__link']} style={{ height: 5 }}>
                         <div className='d-flex justify-content-center align-items-center'>
                             <p style={{ position: "fixed" }}>მოგვწერეთ</p>
                         </div>
                     </Link>
-                </CustomButton>}
+                </CustomButton></div>}
                 {/* car */}
                 {item?.fwd && (
                     <div className={styles.cardetail}>

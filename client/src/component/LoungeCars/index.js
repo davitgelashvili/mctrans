@@ -37,7 +37,7 @@ export const LoungeCars = () => {
 
     const PrevArrow = ({ onClick }) => (
         <button
-            className="btn btn-outline-primary me-2 rounded-circle shadow-sm"
+            className=""
             onClick={onClick}
             style={{ position: "absolute", left: -20, top: "49%", zIndex: 1, borderRadius: "50%", display: "flex",
                 justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
@@ -50,7 +50,7 @@ export const LoungeCars = () => {
 
     const NextArrow = ({ onClick }) => (
         <button
-            className=""
+            className={`custom-arrow custom-next`}
             onClick={onClick}
             style={{ position: "absolute", right: -20, top: "49%", zIndex: 1, borderRadius: "100%", display: "flex",
                 justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
@@ -77,6 +77,8 @@ export const LoungeCars = () => {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
+                    rows: 1,
+                    arrows: true,
                 }
             },
             {
@@ -84,6 +86,8 @@ export const LoungeCars = () => {
                 settings: {
                     slidesToShow: 2,
                     rows: 1,
+                    arrows: false,
+                    dots: true,
                 }
             }
         ]
