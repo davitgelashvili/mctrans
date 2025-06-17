@@ -16,7 +16,7 @@ export const Header = () => {
                     {/* <Menu /> */}
                 </BrowserView>
                 {isMenu && <Menu />}
-                <CustomButton>
+                <CustomButton >
                     <Link to={'/test'} className={styles['header__btn--link']}>
                         მოთხოვნის გაგზავნა
                     </Link>
