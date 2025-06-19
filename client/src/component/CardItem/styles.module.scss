@@ -41,6 +41,8 @@
   border-top: 1px solid rgba(#33434D, 0.11);
   border-bottom: 1px solid rgba(#33434D, 0.11);
   gap: 15px;
+  margin-inline: -15px;
+  color: #050B20;
 }
 
 .btn {
@@ -74,11 +76,20 @@
   align-items: center;
   gap: 8px;
   justify-content: center;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: -10px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #33434D;
 }
 
 .iconMid {
   display: grid;
   place-items: center;
+  padding: 5px;
 }
 
 .Linkcontainer {
@@ -86,14 +97,23 @@
 
   .cornerlink {
     position: absolute;
-    bottom: 15px;
+    bottom: 25px;
     right: 10px;
     color: #405FF2;
     border-radius: 5px;
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover {
       color: #0056b3;
     }
   }
+}
+
+.pricetxt {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+
 }

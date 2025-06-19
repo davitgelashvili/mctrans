@@ -37,7 +37,7 @@ export const CardItem = ({ item, name }) => {
                 </CustomButton></div>}
                 {/* car */}
                 {item?.fwd && (
-                    <div className={styles.cardetail}>
+                    <div className={styles.cardetail} >
                         <div>
                             <p><div className={styles.iconMid}><img src={isari} alt='isari' /></div>{item?.fwd}</p>
                         </div>
@@ -51,7 +51,7 @@ export const CardItem = ({ item, name }) => {
                 )}
                 {item?.price && (
                     <div>
-                        <p>
+                        <p className={styles.pricetxt}>
                             {item?.price}
                         </p>
                     </div>
