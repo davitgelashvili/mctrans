@@ -12,7 +12,7 @@ export default function Menu() {
     <nav>
       <div className="d-flex align-items-center justify-content-between">
         <div className='d-none d-lg-block'>
-          <a href='#' className={styles.header__item}>მთავარი</a>
+          <a href='/' className={styles.header__item}>მთავარი</a>
           <a href='#' className={styles.header__item}>სიახლეები</a>
           <a href='#' className={styles.header__item}>MS Trans ლაუნჯი</a>
           <a href='#' className={styles.header__item}>კატალოგები</a>
@@ -33,7 +33,7 @@ export default function Menu() {
       <div className={`${isOpen ? "d-block" : "d-none"} d-lg-none`}>
         <div className={styles.header__open}>
           <div className={styles.header__boxrow}>
-            <a href='#' className={styles.header__minibox}>მთავარი</a>
+            <a href='/' className={styles.header__minibox}>მთავარი</a>
             <a href='#' className={styles.header__minibox}>სიახლეები</a>
             <a href='#' className={styles.header__minibox}>MS Trans ლაუნჯი</a>
             <a href='#' className={styles.header__minibox}>კატალოგები</a>
