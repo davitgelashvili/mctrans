@@ -7,7 +7,7 @@ import { CustomButton } from '../CustomButton'
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 export const Header = () => {
-    const [isMenu, setIsMenu] = useState(false)
+    const [isMenu, setIsMenu] = useState(true)
     return (
         <header className={styles.header}>
             <div className={`${styles.header__content} d-flex align-items-center justify-content-between`}>
