@@ -2,11 +2,30 @@
     padding: 60px 0;
 
     &__title {
-        font-size: 17px;
+        width: 296;
+        height: 90;
+        top: 52.82px;
+        left: 80px;
+        font-family: DM Sans;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 45px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: #050B20;
     }
 
     &__desc {
-        font-size: 13px;
+        font-family: DM Sans;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        width: 365;
+        height: 70;
+        top: 162.91px;
+        left: 80px;
     }
 
     &__item {

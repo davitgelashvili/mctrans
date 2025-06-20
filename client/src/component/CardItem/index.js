@@ -39,13 +39,13 @@ export const CardItem = ({ item, name }) => {
                 {item?.fwd && (
                     <div className={styles.cardetail} >
                         <div>
-                            <p><div className={styles.iconMid}><img src={isari} alt='isari' /></div>{item?.fwd}</p>
+                            <div><p className={styles.iconMid}><img src={isari} alt='isari' />{item?.fwd}</p></div>
                         </div>
                         <div >
-                            <p><div className={styles.iconMid}><img src={vector} alt='vector' /></div>{item?.kolofi}</p>
+                            <div><p className={styles.iconMid}><img src={vector} alt='vector' />{item?.kolofi}</p></div>
                         </div>
                         <div>
-                            <p><div className={styles.iconMid}><img src={petrol} alt='petrol' /></div>{item?.dzravi}</p>
+                            <div><p className={styles.iconMid}><img src={petrol} alt='petrol' />{item?.dzravi}</p></div>
                         </div>
                     </div>
                 )}
