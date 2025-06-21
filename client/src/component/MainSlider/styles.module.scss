@@ -3,6 +3,8 @@
     display: flex;
     align-items: center;
     position: relative;
+
+    @media (max-width: 1124px) {}
 }
 
 .cover {
@@ -20,6 +22,8 @@
 
 .body {
     display: block;
+    width: auto;
+
 }
 
 .title {
@@ -29,6 +33,7 @@
     line-height: 94.5px;
     letter-spacing: 0%;
     vertical-align: middle;
+    margin-top: -10px;
 
 }
 
@@ -37,12 +42,22 @@
 
     button {
         margin-right: 30px;
+        margin-top: -40px;
+
     }
 }
 
 .btn {
-    padding: 19px 26px;
+    padding: 19px 45px;
     color: #fff;
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
 
     &__white {
         color: #050B20;
@@ -56,7 +71,7 @@
     line-height: 27.75px;
     letter-spacing: 0%;
     vertical-align: middle;
-
+    margin-top: 100px;
 }
 
 .tag2 {
@@ -66,9 +81,36 @@
     line-height: 15px;
     letter-spacing: 0%;
     vertical-align: middle;
-
+    margin-top: 30px;
 }
 
 .features {
     display: flex;
+    margin-top: 30px;
+    gap: 5px;
+
+
+    button {
+        border: 1px solid #E9E9E9;
+        border-radius: 44px;
+}
+
+}
+
+
+.minibtn {
+    border-radius: 44px;
+    border-width: 1px;
+    padding: 4px 20px;
+}
+
+.linktxt {
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #050B20;
+    padding-inline: 5px;
 }
