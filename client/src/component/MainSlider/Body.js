@@ -33,15 +33,19 @@ export default function Body() {
                 <CustomButton>
                     <p className={styles.btn}>
                         View Inventory
-                        <img  src={kutxisT} style={{ position: "absolute", display: "inline-flex", 
-                                marginLeft: 4, width: 11, height: 11, marginTop: 2}}/>
+                        <img src={kutxisT} style={{
+                            position: "absolute", display: "inline-flex",
+                            marginLeft: 4, width: 11, height: 11, marginTop: 2
+                        }} />
                     </p>
                 </CustomButton>
                 <CustomButton light>
                     <p className={`${styles.btn} ${styles.btn__white}`}>
                         Contact Us
-                        <img src={kutxisS} style={{ position: "absolute", display: "inline-flex", 
-                                marginLeft: 4, width: 11, height: 11, marginTop: 2}}/>
+                        <img src={kutxisS} style={{
+                            position: "absolute", display: "inline-flex",
+                            marginLeft: 4, width: 11, height: 11, marginTop: 2
+                        }} />
                     </p>
                 </CustomButton>
             </div>
@@ -50,7 +54,9 @@ export default function Body() {
                 {data.map((item) => {
                     return (
                         <CustomButton light>
-                            <Link to={item.link} className={styles.minibtn} style={{ marginTop: 5}}><img src={item.icon} /><p className={styles.linktxt} style={{ display: "inline-flex", paddingBottom: 5}}>{item.name}</p></Link>
+                            <Link to={item.link} className={styles.minibtn} style={{ marginTop: 5 }}><img src={item.icon} />
+                                <p className={styles.linktxt} style={{ display: "inline-flex", paddingBottom: 5 }}>{item.name}</p>
+                            </Link>
                         </CustomButton>
                     )
                 })}
