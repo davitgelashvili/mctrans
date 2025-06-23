@@ -12,7 +12,7 @@ export const RequestBox = () => {
     return (
         <Section>
             <div className='row'>
-                <div className='col-12 col-lg-6'>
+                <div className={`col-12 col-lg-6 ${styles.formobile}`}>
                     <Box
                         color={'#E9F2FF'}
                         title={'ეძებ ახალ მანქანას ? '}
@@ -29,7 +29,7 @@ export const RequestBox = () => {
                         </CustomButton>
                     </Box>
                 </div>
-                <div className='col-12 col-lg-6'>
+                <div className={`col-12 col-lg-6 ${styles.formobile2}`}>
                     <Box
                         color={'#FFE9F3'}
                         title={'გახდი ჩვენი დილერი'}

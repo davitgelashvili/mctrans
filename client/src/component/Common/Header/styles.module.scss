@@ -9,6 +9,7 @@
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
 
+
     &__content {
         padding: 0 50px;
     }
@@ -91,9 +92,9 @@
     }
 
     &__minibox {
-        width: 380px;
-        height: 20px;
-        padding: 1rem;
+        width: 350px;
+        height: 10px;
+        padding: 10px;
         background-color: #f8f9fa;
         border-radius: 12px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -108,7 +109,7 @@
         font-size: 20px;
         letter-spacing: 0%;
         vertical-align: middle;
-
+        padding-bottom: 34px;
 
         &:hover {
             background-color: #405FF2;

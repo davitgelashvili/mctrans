@@ -39,3 +39,17 @@
         }
     }
 }
+
+.formobile {
+    @media (max-width: 768px) {
+        margin-top: -200px;
+
+    }
+}
+
+.formobile2 {
+    @media (max-width: 768px) {
+        margin-top: 10px;
+
+    }
+}

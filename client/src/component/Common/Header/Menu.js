@@ -48,7 +48,7 @@ export default function Menu() {
             })}
           </div>
 
-          <img src={logo} alt='logo' className='d-block d-lg-none img-fluid mx-auto' />
+          <img src={logo} alt='logo' className='d-block d-lg-none img-fluid mx-auto mt-1' />
         </div>
       </div>
     </nav>
