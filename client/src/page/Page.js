@@ -5,6 +5,10 @@ import CarsPage from './cars/Cars'
 import { Header } from '../component/Common/Header'
 import { Footer } from '../component/Common/Footer'
 import CalculatorPage from './calculator/page'
+import { NewsPage } from './news/page'
+import { VinPage } from './vin/page'
+import { TeamsPage } from './teams/page'
+import ContactPage from './contact/page'
 
 export default function Page() {
     return (
@@ -12,8 +16,12 @@ export default function Page() {
             <Header />
             <Routes>
                 <Route path='/' element={<MainPage />} />
+                <Route path='/news' element={<NewsPage />} />
                 <Route path='/cars' element={<CarsPage />} />
+                <Route path='/teams' element={<TeamsPage />} />
                 <Route path='/calculator' element={<CalculatorPage />} />
+                <Route path='/vin' element={<VinPage />} />
+                <Route path='/contact' element={<ContactPage />} />
             </Routes>
             <Footer />
         </>

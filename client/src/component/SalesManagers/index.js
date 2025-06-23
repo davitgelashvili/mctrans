@@ -95,21 +95,19 @@ export const SalesManagers = () => {
     return (
         <Section smollTitle={'გაყიდვების გუნდი'} background>
             <div className={`${styles['salesmanager']}`}>
-                <div className='container'>
-                    {!data && <Loading />}
-                    <div className='row'>
-                          <Slider {...settings}>
-                            {data?.map((item) => {
-                                return (
-                                    <div className="p-1">
-                                        <div className='bg-light p-2 border rounded' style={{ textAlign: "center"}} key={item._id}>
-                                            <CardItem item={item} name="teams" />
-                                        </div>
+                {!data && <Loading />}
+                <div className='row'>
+                    <Slider {...settings}>
+                        {data?.map((item) => {
+                            return (
+                                <div className="p-1">
+                                    <div className='bg-light p-2 border rounded' style={{ textAlign: "center" }} key={item._id}>
+                                        <CardItem item={item} name="teams" />
                                     </div>
-                                )
-                            })}
-                        </Slider>
-                    </div>
+                                </div>
+                            )
+                        })}
+                    </Slider>
                 </div>
             </div>
         </Section>
