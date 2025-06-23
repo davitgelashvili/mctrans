@@ -39,7 +39,8 @@ export const LoungeCars = () => {
         <button
             className=""
             onClick={onClick}
-            style={{ position: "absolute", left: -20, top: "49%", zIndex: 1, borderRadius: "50%", display: "flex",
+            style={{
+                position: "absolute", left: -20, top: "49%", zIndex: 1, borderRadius: "50%", display: "flex",
                 justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
                 transition: "background-color 0.3s ease", border: "none"
             }}
@@ -52,7 +53,8 @@ export const LoungeCars = () => {
         <button
             className={`custom-arrow custom-next`}
             onClick={onClick}
-            style={{ position: "absolute", right: -20, top: "49%", zIndex: 1, borderRadius: "100%", display: "flex",
+            style={{
+                position: "absolute", right: -20, top: "49%", zIndex: 1, borderRadius: "100%", display: "flex",
                 justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
                 transition: "background-color 0.3s ease", border: "none"
             }}
@@ -96,22 +98,20 @@ export const LoungeCars = () => {
     return (
         <Section smollTitle={'მანქანები'} background>
             <div className={`${styles['cars']}`}>
-                <div className='container'>
-                    {!data && <Loading />}
-                    <Slider {...settings}>
-                        {data?.map((item) => {
-                            return (
-                                <div key={item._id} >
-                                    <div className='p-2'>
-                                        <div className='bg-light p-2 border rounded'>
-                                            <CardItem item={item} name="cars" />
-                                        </div>
+                {!data && <Loading />}
+                <Slider {...settings}>
+                    {data?.map((item) => {
+                        return (
+                            <div key={item._id} >
+                                <div className='p-2'>
+                                    <div className='bg-light p-2 border rounded'>
+                                        <CardItem item={item} name="cars" />
                                     </div>
                                 </div>
-                            )
-                        })}
-                    </Slider>
-                </div>
+                            </div>
+                        )
+                    })}
+                </Slider>
             </div>
         </Section>
     )

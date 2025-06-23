@@ -11,8 +11,8 @@ export const Section = ({ children, bigTitle, smollTitle, background }) => {
                     </div>
                 )}
                 {bigTitle && <h1 className={styles.section__title}>{bigTitle}</h1>}
-            </div>
             {children}
+            </div>
         </section>
     )
 }

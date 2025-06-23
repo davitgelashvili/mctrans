@@ -9,7 +9,7 @@ export const Benefits = () => {
 
 
     return (
-        <Section>
+        // <Section>
             <div className={`${styles['benefits']}`}>
                 <div className='container'>
                     <div className={`${styles['benefits__container']}`}>
@@ -38,6 +38,6 @@ export const Benefits = () => {
                 </div>
 
             </div>
-        </Section>
+        // </Section>
     )
 }
