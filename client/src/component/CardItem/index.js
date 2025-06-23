@@ -22,7 +22,7 @@ export const CardItem = ({ item, name }) => {
                 <img src={person} alt='person' style={{ marginLeft: -20, position: "absolute", display: "inline" }} />
                 {item?.name}
             </h1>}
-            {name === 'blogs' && <h1 className={styles.card__title}>{item?.title?.ka}</h1>}
+            {name === 'blogs' && <h1 className={`${styles.card__title} ${styles.mbview}`}>{item?.title?.ka}</h1>} 
             <div className={styles.card__body}>
                 {/* blog description */}
                 {item?.desc && `${item?.desc?.ka}`}

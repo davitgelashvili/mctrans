@@ -27,13 +27,21 @@
     font-size: 18px;
     line-height: 18px;
     text-wrap-mode: nowrap;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    vertical-align: middle;
 
+    
   }
 
   &__body {
     padding: 0 31px 17px 31px;
   }
 }
+
 
 .cardetail {
   display: flex;

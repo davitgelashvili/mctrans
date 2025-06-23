@@ -54,7 +54,7 @@ export default function Body() {
                 {data.map((item) => {
                     return (
                         <CustomButton light>
-                            <Link to={item.link} className={styles.minibtn} style={{ marginTop: 5 }}><img src={item.icon} />
+                            <Link to={item.link} className={styles.minibtn} style={{ marginTop: 5 }} key={item.name}><img src={item.icon} />
                                 <p className={styles.linktxt} style={{ display: "inline-flex", paddingBottom: 5 }}>{item.name}</p>
                             </Link>
                         </CustomButton>

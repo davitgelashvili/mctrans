@@ -1,0 +1,30 @@
+.item {
+
+    &__icon {
+        width: 51;
+        height: 60;
+        top: 4756px;
+        left: 268px;
+        margin-left: 0%;
+    }
+
+    &__title {
+        font-family: DM Sans;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+
+    }
+
+    &__desc {
+        font-family: DM Sans;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 27.75px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+
+    }
+}
