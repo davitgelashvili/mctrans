@@ -6,11 +6,11 @@ import Loading from '../Loading/Loading';
 import { CardItem } from '../CardItem';
 import { Section } from '../Common/Section';
 
-export const LastBlog = () => {
+export const News = () => {
     const [data, setData] = useState();
     const [params, setParams] = useState({
         page: 1,
-        limit: 4
+        limit: 20
     });
     const [totalPages, setTotalPages] = useState(1);
 
@@ -30,10 +30,17 @@ export const LastBlog = () => {
     }, [params]);
 
     return (
-        <Section bigTitle={'Latest Blog Posts'}>
+        <Section smollTitle={'Blog'}>
             <div className={`${styles['lastblog']}`}>
                     {!data && <Loading />}
                     <div className='row'>
+                        {data?.map((item) => {
+                            return (
+                                <div className='col-12 col-md-6 col-lg-4 d-flex' key={item._id}>
+                                    <CardItem item={item} name="blogs"/>
+                                </div>
+                            )
+                        })}
                         {data?.map((item) => {
                             return (
                                 <div className='col-12 col-md-6 col-lg-4 d-flex' key={item._id}>

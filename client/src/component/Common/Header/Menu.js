@@ -11,12 +11,12 @@ export default function Menu() {
 
   const data = [
     { link: "/", title: "მთავარი" },
-    { link: "/test", title: "სიახლეები" },
-    { link: "/test", title: "MS Trans ლაუნჯი" },
-    { link: "/test", title: "კატალოგები" },
-    { link: "/test", title: "გაყიდვების გუნდი" },
-    { link: "/test", title: "განბაჟება" },
-    { link: "/test", title: "VIN:ძებნა" },
+    { link: "/news", title: "სიახლეები" },
+    { link: "/cars", title: "MS Trans ლაუნჯი" },
+    { link: "/cars", title: "კატალოგები" },
+    { link: "/teams", title: "გაყიდვების გუნდი" },
+    { link: "/calculator", title: "განბაჟება" },
+    { link: "/vin", title: "VIN:ძებნა" },
   ]
 
   return (

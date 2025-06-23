@@ -10,20 +10,18 @@ export const WhyUs = () => {
     return (
         <Section bigTitle={'რატომ ჩვენ'} background>
             <div className={`${styles['']}`}>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col-12 col-md-6 col-lg-3'>
-                            <Item />
-                        </div>
-                        <div className='col-12 col-md-6 col-lg-3'>
-                            <Item />
-                        </div>
-                        <div className='col-12 col-md-6 col-lg-3'>
-                            <Item />
-                        </div>
-                        <div className='col-12 col-md-6 col-lg-3'>
-                            <Item />
-                        </div>
+                <div className='row'>
+                    <div className='col-12 col-md-6 col-lg-3'>
+                        <Item />
+                    </div>
+                    <div className='col-12 col-md-6 col-lg-3'>
+                        <Item />
+                    </div>
+                    <div className='col-12 col-md-6 col-lg-3'>
+                        <Item />
+                    </div>
+                    <div className='col-12 col-md-6 col-lg-3'>
+                        <Item />
                     </div>
                 </div>
             </div>
