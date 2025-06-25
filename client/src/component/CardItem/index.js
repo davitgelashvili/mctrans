@@ -19,7 +19,7 @@ export const CardItem = ({ item, name }) => {
             </figure>
             {name === 'cars' && <h1 className={styles.card__title}>{item?.title}</h1>}
             {name === 'teams' && <h1 className={styles.card__title} style={{ backgroundColor: '#CEE1F2' }}>
-                <img src={person} alt='person' style={{ marginLeft: -20, position: "absolute", display: "inline" }} />
+                <img src={person} alt='person' style={{ marginLeft: -20, display: "inline" }} />
                 {item?.name}
             </h1>}
             {name === 'blogs' && <h1 className={`${styles.card__title} ${styles.mbview}`}>{item?.title?.ka}</h1>} 

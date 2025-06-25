@@ -1,10 +1,12 @@
 .slider {
-    height: calc(100vh - 200px);
+    height: calc(60vh);
     display: flex;
     align-items: center;
     position: relative;
 
-    @media (max-width: 1124px) {}
+    @media (max-width: 1124px) {
+        height: calc(40vh);
+    }
 }
 
 .cover {
@@ -30,12 +32,6 @@
 .body {
     display: block;
     width: auto;
-    
-
-    @media (max-width: 1124px) {
-        margin-bottom: 340px;
-        
-    }
 
 }
 
@@ -43,18 +39,11 @@
     font-family: DM Sans;
     font-weight: 700;
     font-size: 70px;
-    line-height: 94.5px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    margin-top: -10px;
 
     @media (max-width: 1124px) {
         font-weight: 700;
         font-size: 20px;
-        line-height: 30.5px;
-        letter-spacing: 0%;
         vertical-align: auto;
-        margin-bottom: 30px;
     }
 
 }
@@ -67,9 +56,9 @@
         margin-top: -40px;
 
         @media (max-width: 1124px) {
-            margin-right: 20px;
-            margin-top: -20px;
-            margin-bottom: 70px;
+            margin-right: 10px;
+            margin-top: -10px;
+            margin-bottom: -10px;
         }
     }
 }
@@ -80,8 +69,6 @@
     font-family: DM Sans;
     font-weight: 500;
     font-size: 15px;
-    line-height: 15px;
-    letter-spacing: 0%;
     text-align: center;
     vertical-align: middle;
 
@@ -91,7 +78,7 @@
     }
 
     @media (max-width: 1124px) {
-        padding: 5px 25px;
+        padding: 0px 25px;
         font-weight: 200;
         font-size: 10px;
         white-space: nowrap;
@@ -102,16 +89,10 @@
     font-family: DM Sans;
     font-weight: 400;
     font-size: 15px;
-    line-height: 27.75px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    margin-top: 100px;
 
     @media (max-width: 1124px) {
         font-weight: 500;
         font-size: 13px;
-        line-height: 17.75px;
-        margin-bottom: 15px;
     }
 }
 
@@ -119,22 +100,17 @@
     font-family: DM Sans;
     font-weight: 500;
     font-size: 15px;
-    line-height: 15px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    margin-top: 30px;
+
 
     @media (max-width: 1124px) {
         font-weight: 500;
         font-size: 13px;
         line-height: 13.75px;
-        margin-top: -55px;
     }
 }
 
 .features {
     display: flex;
-    margin-top: 30px;
     gap: 5px;
 
 
@@ -144,7 +120,6 @@
     }
 
     @media (max-width: 1124px) {
-        margin-top: 12px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -166,7 +141,6 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
-    letter-spacing: 0%;
     vertical-align: middle;
     color: #050B20;
     padding-inline: 5px;
