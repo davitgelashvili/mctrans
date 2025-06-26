@@ -27,11 +27,13 @@
     font-size: 18px;
     line-height: 18px;
     text-wrap-mode: nowrap;
-    font-family: DM Sans;
     font-weight: 700;
     font-size: 20px;
     line-height: 30px;
-    vertical-align: middle;
+
+    img {
+      display: unset;
+    }
 
     a {
       text-decoration: none;
