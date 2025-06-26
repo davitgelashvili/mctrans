@@ -18,20 +18,23 @@ export const CardItem = ({ item, name }) => {
                 <img src={item?.cover} alt='ტესტ' />
             </figure>
             {name === 'cars' && <h1 className={styles.card__title}>{item?.title}</h1>}
-            {name === 'teams' && <h1 className={styles.card__title} style={{ backgroundColor: '#CEE1F2' }}>
-                <img src={person} alt='person' style={{ marginLeft: -20, display: "inline" }} />
+            {name === 'teams' && <h1 className={styles.card__title}>
+                <img src={person} alt='person' />
                 {item?.name}
             </h1>}
-            {name === 'blogs' && <h1 className={`${styles.card__title} ${styles.mbview}`}>{item?.title?.ka}</h1>} 
+            {name === 'blogs' && <h1 className={`${styles.card__title} ${styles.mbview}`}>
+                <Link to={`/news/${item._id}`}>{item?.title?.ka}</Link>
+            </h1>} 
             <div className={styles.card__body}>
                 {/* blog description */}
-                {item?.desc && `${item?.desc?.ka}`}
+                <div dangerouslySetInnerHTML={{ __html: item?.desc?.ka}}></div>
+                {/* {item?.desc && `${item?.desc?.ka}`} */}
                 {item?.location && <div className={styles.icontext}><img src={pin} alt='pin' /><p>{item?.location}</p></div>}
                 {item?.location && <div className={styles.icontext}><img src={post} alt='post' /><p>sale@mctrans.ge</p></div>}
                 {item?.location && <div className="d-flex justify-content-center align-items-center"><CustomButton >
-                    <Link to="/test" className={styles['btn__link']} style={{ height: 5 }}>
+                    <Link to="/test" className={styles['btn__link']}>
                         <div className='d-flex justify-content-center align-items-center'>
-                            <p style={{ position: "fixed" }}>მოგვწერეთ</p>
+                            <p>მოგვწერეთ</p>
                         </div>
                     </Link>
                 </CustomButton></div>}

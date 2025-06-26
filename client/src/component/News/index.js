@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import getApi from '../../http/getApi';
-import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import { CardItem } from '../CardItem';
 import { Section } from '../Common/Section';
