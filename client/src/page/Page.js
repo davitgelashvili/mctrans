@@ -16,7 +16,7 @@ export default function Page() {
             <Header />
             <Routes>
                 <Route path='/' element={<MainPage />} />
-                <Route path='/news' element={<NewsPage />} />
+                <Route path='/news/*' element={<NewsPage />} />
                 <Route path='/cars' element={<CarsPage />} />
                 <Route path='/teams' element={<TeamsPage />} />
                 <Route path='/calculator' element={<CalculatorPage />} />
