@@ -12,7 +12,7 @@ import service from "../../assets/icons/service.svg"
 export const WhyUs = () => {
 
     return (
-        <Section bigTitle={'რატომ ჩვენ ?'} background>
+        <Section bigTitle={'რატომ ჩვენ ?'} background> 
             <div className={`${styles['']}`}>
                 <div className='row'>
                     <div className='col-12 col-md-6 col-lg-3'>

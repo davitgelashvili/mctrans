@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import { Form } from '../Form';
 
+
 export const Calculator = () => {
 
 
@@ -13,7 +14,7 @@ export const Calculator = () => {
                 bigImage="3"
                 title="კალკულატორი">
                 1111
-            </Form>
+            </Form> 
         </div>
     )
 }

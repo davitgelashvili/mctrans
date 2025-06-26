@@ -9,6 +9,6 @@ export default function Item({ item }) {
             </figure>
             <h3 className={styles.item__title}>title</h3>
             <p>desc</p>
-        </div>
+        </div> 
     )
 }

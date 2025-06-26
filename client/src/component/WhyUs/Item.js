@@ -12,5 +12,5 @@ export default function Item({ icon, title, item}) {
             <h3 className={styles.item__title}>{title}</h3>
             <p className={styles.item__desc}>{item}</p>
         </div>
-    )
+    ) 
 }

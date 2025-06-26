@@ -33,19 +33,13 @@ export default function Body() {
                 <CustomButton>
                     <p className={styles.btn}>
                         View Inventory
-                        <img src={kutxisT} style={{
-                            position: "absolute", display: "inline-flex",
-                            marginLeft: 4, width: 11, height: 11, marginTop: 2
-                        }} />
+                        <img src={kutxisT} className={styles.forimg}/>
                     </p>
                 </CustomButton>
                 <CustomButton light>
                     <p className={`${styles.btn} ${styles.btn__white}`}>
                         Contact Us
-                        <img src={kutxisS} style={{
-                            position: "absolute", display: "inline-flex",
-                            marginLeft: 4, width: 11, height: 11, marginTop: 2
-                        }} />
+                        <img src={kutxisS} className={styles.forimg}/>
                     </p>
                 </CustomButton>
             </div>
@@ -54,8 +48,8 @@ export default function Body() {
                 {data.map((item) => {
                     return (
                         <CustomButton light>
-                            <Link to={item.link} className={styles.minibtn} style={{ marginTop: 5 }} key={item.name}><img src={item.icon} />
-                                <p className={styles.linktxt} style={{ display: "inline-flex", paddingBottom: 5 }}>{item.name}</p>
+                            <Link to={item.link} className={styles.minibtn} key={item.name}><img src={item.icon} />
+                                {item.name}
                             </Link>
                         </CustomButton>
                     )
