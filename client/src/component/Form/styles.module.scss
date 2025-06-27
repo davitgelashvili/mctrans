@@ -14,18 +14,64 @@
     figure {
         margin: 0;
         padding: 0;
-        
+
         img {
             width: 100%;
         }
+
+        @media (max-width: 1124px) {}
     }
 
-    .smallimg2{
+    .smallimg1 {
+        @media (max-width: 1124px) {
+            width: 135px;
+            height: 135px;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+    }
+
+    .smallimg2 {
         margin-left: 30px;
         margin-top: 30px;
+
+        &__mobile {
+            @media (max-width: 1124px) {
+                width: 135px;
+                height: 135px;
+            }
+        }
     }
-    
-    .bigimg{
-        // padding: 105px 20px;
+
+
+    .bigimg {
+        @media (max-width: 1124px) {
+            width: 285px;
+            height: 215px;
+            margin-bottom: 25px;
+            margin-left: -40px;
+        }
+    }
+}
+
+.formobile {
+    @media (max-width: 1124px) {
+        flex-direction: column;
+        
+    }
+}
+
+.colmobile {
+    @media (max-width: 1124px) {
+        width: 100%;
+    }
+}
+
+.rowmobile {
+    @media (max-width: 1124px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 }
