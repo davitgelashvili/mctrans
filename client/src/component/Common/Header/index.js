@@ -15,12 +15,16 @@ export const Header = () => {
                 <BrowserView>
                     {/* <Menu /> */}
                 </BrowserView>
-                {isMenu && <Menu />}
-                <CustomButton >
-                    <Link to={'/contact'} className={styles['header__btn--link']}>
-                        მოთხოვნის გაგზავნა
-                    </Link>
-                </CustomButton>
+                <div className="order-2 order-md-">
+                        {isMenu && <Menu />}
+                </div>
+                <div className={`order-1 order-md-2 ${styles.btnmobile}`}>
+                    <CustomButton >
+                        <Link to={'/contact'} className={styles['header__btn--link']}>
+                            მოთხოვნის გაგზავნა
+                        </Link>
+                    </CustomButton>
+                </div>
                 <MobileView>
                     <button onClick={() => setIsMenu(!isMenu)}>
                         {isMenu && <p>close</p>}

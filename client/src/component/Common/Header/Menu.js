@@ -43,7 +43,7 @@ export default function Menu() {
           <div className={styles.header__boxrow}>
             {data?.map((item) => {
               return (
-                <Link className={styles.header__minibox} to={item.link} key={item.title}>{item.title}</Link>
+                <Link onClick={() => setIsOpen(!isOpen)} className={styles.header__minibox} to={item.link} key={item.title}>{item.title}</Link>
               )
             })}
           </div>

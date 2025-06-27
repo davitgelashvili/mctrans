@@ -21,6 +21,10 @@
             text-decoration: none;
             color: #fff;
             text-wrap-mode: nowrap;
+
+            @media (max-width: 1124px) {
+                padding: 10px 45px;
+            }
         }
 
     }
@@ -123,5 +127,11 @@
         flex-wrap: wrap;
         padding: 1rem;
 
+    }
+}
+
+.btnmobile {
+    @media (max-width: 1124px) {
+        padding: 10px 45px;
     }
 }

@@ -11,7 +11,7 @@ export const MainSlider = () => {
                     <div className='col-6'>
                         <Body />
                     </div>
-                </div>
+                </div> 
             </div>
             <Cover />
         </section>
