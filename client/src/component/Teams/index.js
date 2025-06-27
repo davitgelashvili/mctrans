@@ -41,7 +41,7 @@ export const Teams = () => {
                 <div className='row'>
                     {data?.map((item) => {
                         return (
-                            <div className="col-4">
+                            <div className="col-12 col-md-6 col-lg-4">
                                 <CardItem item={item} name="teams" />
                             </div>
                         )

@@ -42,7 +42,7 @@ export const Cars = () => {
                 <div className='row'>
                     {data?.map((item) => {
                         return (
-                            <div className='col-4' key={item._id} >
+                            <div className='col-12 col-md-6 col-lg-3' key={item._id} >
                                 <CardItem item={item} name="cars" />
                             </div>
                         )

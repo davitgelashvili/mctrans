@@ -10,10 +10,22 @@
     padding: 19px 33px;
 }
 
-.smallimg2{
-    padding: 0px 45px;
-}
+.cover {
+    figure {
+        margin: 0;
+        padding: 0;
+        
+        img {
+            width: 100%;
+        }
+    }
 
-.bigimg{
-    padding: 105px 20px;
+    .smallimg2{
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    
+    .bigimg{
+        // padding: 105px 20px;
+    }
 }

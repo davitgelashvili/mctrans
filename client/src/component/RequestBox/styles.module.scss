@@ -32,6 +32,10 @@
         padding: 50px 80px;
         border-radius: 12px;
 
+        @media (max-width: 1198px){
+            padding: 30px 50px;
+        }
+
         a {
             font-size: 14px;
             color: #fff;

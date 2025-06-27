@@ -74,19 +74,21 @@ export const SalesManagers = () => {
         prevArrow: <PrevArrow />,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
-                    rows: 1
                 }
             },
             {
-                breakpoint: 767,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
-                    rows: 1,
-                    arrows: false,
-                    dots: true,
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
                 }
             }
         ]

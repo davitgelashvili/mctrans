@@ -9,6 +9,7 @@ import { NewsPage } from './news/page'
 import { VinPage } from './vin/page'
 import { TeamsPage } from './teams/page'
 import ContactPage from './contact/page'
+import { LoginPage } from './login/login'
 
 export default function Page() {
     return (
@@ -22,6 +23,7 @@ export default function Page() {
                 <Route path='/calculator' element={<CalculatorPage />} />
                 <Route path='/vin' element={<VinPage />} />
                 <Route path='/contact' element={<ContactPage />} />
+                <Route path='/login' element={<LoginPage />} />
             </Routes>
             <Footer />
         </>
