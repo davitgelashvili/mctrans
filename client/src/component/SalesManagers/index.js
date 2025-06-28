@@ -8,8 +8,8 @@ import { Section } from '../Common/Section';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { MdKeyboardArrowLeft } from "react-icons/md";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import rightarrow from "../../assets/icons/rightarrow.svg"
+import leftarrow from "../../assets/icons/leftarrow.svg"
 
 export const SalesManagers = () => {
     const [data, setData] = useState();
@@ -39,12 +39,12 @@ export const SalesManagers = () => {
             className="btn btn-outline-primary me-2 rounded-circle shadow-sm"
             onClick={onClick}
             style={{
-                position: "absolute", left: -30, top: "50%", zIndex: 1, borderRadius: "50%", display: "flex",
-                justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
-                transition: "background-color 0.3s ease", border: "none"
+                position: "absolute", left: "44%", top: "100%", zIndex: 1, borderRadius: "50%", display: "flex",
+                justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#FFFFFF", color: "#333",
+                transition: "background-color 0.3s ease", border: "none", width: 60, height: 40, borderColor: "#E9E9E9"
             }}
         >
-            <MdKeyboardArrowLeft />
+            <img src={leftarrow}/>
         </button>
     );
 
@@ -53,12 +53,12 @@ export const SalesManagers = () => {
             className=""
             onClick={onClick}
             style={{
-                position: "absolute", right: -30, top: "50%", zIndex: 1, borderRadius: "100%", display: "flex",
-                justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ddd", color: "#333",
-                transition: "background-color 0.3s ease", border: "none"
+                position: "absolute", right: "44%", top: "100%", zIndex: 1, borderRadius: "100%", display: "flex",
+                justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ffff", color: "#333",
+                transition: "background-color 0.3s ease", border: "none", width: 60, height: 40, borderColor: "#E9E9E9"
             }}
         >
-            <MdKeyboardArrowRight />
+            <img src={rightarrow}/>
         </button>
     );
 
@@ -77,18 +77,24 @@ export const SalesManagers = () => {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
+                    arrows: false,
+                    dots: true
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
+                    arrows: false,
+                    dots: true
                 }
             },
             {
                 breakpoint: 769,
                 settings: {
                     slidesToShow: 2,
+                    arrows: false,
+                    dots: true
                 }
             }
         ]

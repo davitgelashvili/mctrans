@@ -8,6 +8,11 @@
     border-radius: 22px;
     border: 1px solid #33434D1C;
     padding: 19px 33px;
+    margin-left: 70px;
+
+    @media (max-width: 1124px) {
+        margin-left: 0;
+    }
 }
 
 .cover {
@@ -45,6 +50,10 @@
 
 
     .bigimg {
+
+        width: 285px;
+        height: 345px;
+
         @media (max-width: 1124px) {
             width: 285px;
             height: 215px;

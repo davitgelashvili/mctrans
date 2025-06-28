@@ -1,6 +1,11 @@
 .vin {
     display: block;
     background-color: #F9FBFC;
+    padding: 30px;
+    
+    @media (max-width: 1124px) {
+        padding: 0px;
+    }
 
     &__btn {
         width: 100%;
