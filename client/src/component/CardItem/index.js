@@ -18,7 +18,7 @@ export const CardItem = ({ item, name }) => {
                 <img src={item?.cover} alt='ტესტ' />
             </figure>
             {name === 'cars' && <h1 className={styles.card__title}>{item?.title}</h1>}
-            {name === 'teams' && <h1 className={styles.card__title}>
+            {name === 'teams' && <h1 className={`${styles.card__title} ${styles.sectitle}`}>
                 <img src={person} alt='person' />
                 {item?.name}
             </h1>}

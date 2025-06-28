@@ -28,8 +28,7 @@
     line-height: 18px;
     text-wrap-mode: nowrap;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
+    
 
     @media (max-width: 1399px) {
       padding: 15px;
@@ -48,6 +47,7 @@
     }
   }
 
+
   &__body {
     padding: 0 31px 17px 31px;
 
@@ -55,6 +55,17 @@
       padding: 0 15px 17px 15px;
     }
   }
+
+}
+
+.sectitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+  display: unset;
 }
 
 

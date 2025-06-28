@@ -63,19 +63,6 @@
     }
 }
 
-.formobile {
-    @media (max-width: 1124px) {
-        flex-direction: column;
-        
-    }
-}
-
-.colmobile {
-    @media (max-width: 1124px) {
-        width: 100%;
-    }
-}
-
 .rowmobile {
     @media (max-width: 1124px) {
         display: flex;

@@ -37,13 +37,8 @@ export const LoungeCars = () => {
 
     const PrevArrow = ({ onClick }) => (
         <button
-            className=""
+            className={styles.leftbutton}
             onClick={onClick}
-            style={{
-                position: "absolute", left: "44%", top: "100%", zIndex: 1, borderRadius: "50%", display: "flex",
-                justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ffff", color: "#333",
-                transition: "background-color 0.3s ease", border: "none", width: 60, height: 40, borderColor: "#E9E9E9"
-            }}
         >
             <img src={leftarrow}/>
         </button>
@@ -51,13 +46,8 @@ export const LoungeCars = () => {
 
     const NextArrow = ({ onClick }) => (
         <button
-            className={`custom-arrow custom-next`}
+            className={`custom-arrow custom-next ${styles.rightbutton}`}
             onClick={onClick}
-            style={{
-                position: "absolute", right: "44%", top: "100%", zIndex: 1, borderRadius: "100%", display: "flex",
-                justifyContent: "center", alignItems: "center", cursor: "pointer", background: "#ffff", color: "#333",
-                transition: "background-color 0.3s ease", border: "none", width: 60, height: 40, borderColor: "#E9E9E9"
-            }}
         >
             <img src={rightarrow} />
         </button>
@@ -79,16 +69,12 @@ export const LoungeCars = () => {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
-                    arrows: false,
-                    dots: true
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
-                    arrows: false,
-                    dots: true
                 }
             },
             {
@@ -96,8 +82,6 @@ export const LoungeCars = () => {
                 settings: {
                     slidesToShow: 2,
                     rows: 1,
-                    arrows: false,
-                    dots: true
                 }
             }
         ]
