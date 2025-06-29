@@ -39,7 +39,7 @@ export const SalesManagers = () => {
             className={`btn btn-outline-primary me-2 rounded-circle shadow-sm ${styles.leftbutton}`}
             onClick={onClick}
         >
-            <img src={leftarrow}/>
+            <img src={leftarrow} />
         </button>
     );
 
@@ -48,7 +48,7 @@ export const SalesManagers = () => {
             className={styles.rightbutton}
             onClick={onClick}
         >
-            <img src={rightarrow}/>
+            <img src={rightarrow} />
         </button>
     );
 
@@ -92,8 +92,8 @@ export const SalesManagers = () => {
                     <Slider {...settings}>
                         {data?.map((item) => {
                             return (
-                                <div className="p-1">
-                                    <div className='bg-light p-2 border rounded' style={{ textAlign: "center" }} key={item._id}>
+                                <div className="p-1" key={item._id}>
+                                    <div className='bg-light p-2 border rounded' style={{ textAlign: "center" }}>
                                         <CardItem item={item} name="teams" />
                                     </div>
                                 </div>

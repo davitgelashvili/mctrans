@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import { Form } from '../Form';
-import { Input } from './Input';
 import { CustomButton } from '../Common/CustomButton';
 import calcbigimg from "../../assets/images/calcbigimg.svg"
 import calcimg1 from "../../assets/images/calcimg1.svg"
 import calcimg2 from "../../assets/images/calcimg2.svg"
+import { CustomInput } from '../Common/CustomInput';
 
 export const VinSearch = () => {
+    const [values, setValues] = useState({
+        vin: "",
+        container: "",
+    })
+
+    function handleChange(e){
+        setValues({
+            ...values
+        })
+    }
 
     return (
         <div className={`${styles['vin']}`}>
@@ -19,10 +29,22 @@ export const VinSearch = () => {
                 <div>
                     <p>Vehicle information</p>
                     <p>Enter VIN code or Enter container number</p>
-                    <p>VIN code </p>
-                    <input type='text' />
-                    <p>Container number  </p>
-                    <input type='text' />
+                    <CustomInput
+                        type={'text'}
+                        title={'vin code'}
+                        name={'vin'}
+                        value={values.vin}
+                        placeholder={'enter vin code'}
+                        onChange={handleChange}
+                    />
+                    <CustomInput
+                        type={'text'}
+                        title={'container number'}
+                        name={'container'}
+                        value={values.container}
+                        placeholder={'enter container number'}
+                        onChange={handleChange}
+                    />
                     <CustomButton>
                         <p>Search</p>
                     </CustomButton>

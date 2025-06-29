@@ -2,40 +2,4 @@
     display: block;
     background-color: #F9FBFC;
     padding: 30px;
-    
-    @media (max-width: 1124px) {
-        padding: 0px;
-    }
-
-    &__btn {
-        width: 100%;
-        padding: 13px 100px;
-    }
-}
-
-.label {
-    display: block;
-    position: relative;
-    cursor: pointer;
-
-    &__input {
-        position: absolute;
-        z-index: -1;
-
-        &:checked {
-
-            ~.label__text {
-                background-color: #CEE1F2;
-                border: 1px solid transparent;
-            }
-        }
-    }
-
-    &__text {
-        border: 1px solid #000000;
-        border-radius: 12px;
-        padding: 14px 19px;
-        font-size: 15px;
-        line-height: 30px;
-    }
 }

@@ -1,4 +1,3 @@
-// import './App.scss';
 import { Route, Routes } from "react-router";
 import Adminpanel from './adminpanel/Adminpanel';
 import Page from "./page/Page";

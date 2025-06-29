@@ -33,13 +33,13 @@ export default function Body() {
                 <CustomButton>
                     <p className={styles.btn}>
                         View Inventory
-                        <img src={kutxisT} className={styles.forimg}/>
+                        <img src={kutxisT} alt='icon'/>
                     </p>
                 </CustomButton>
                 <CustomButton light>
                     <p className={`${styles.btn} ${styles.btn__white}`}>
                         Contact Us
-                        <img src={kutxisS} className={styles.forimg}/>
+                        <img src={kutxisS} alt='icon'/>
                     </p>
                 </CustomButton>
             </div>

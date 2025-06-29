@@ -18,7 +18,7 @@ export const CardItem = ({ item, name }) => {
                 <img src={item?.cover} alt='ტესტ' />
             </figure>
             {name === 'cars' && <h1 className={styles.card__title}>{item?.title}</h1>}
-            {name === 'teams' && <h1 className={`${styles.card__title} ${styles.sectitle}`}>
+            {name === 'teams' && <h1 className={`${styles['card__title']} ${styles['card__title--team']}`}>
                 <img src={person} alt='person' />
                 {item?.name}
             </h1>}
@@ -27,8 +27,7 @@ export const CardItem = ({ item, name }) => {
             </h1>} 
             <div className={styles.card__body}>
                 {/* blog description */}
-                <div dangerouslySetInnerHTML={{ __html: item?.desc?.ka}}></div>
-                {/* {item?.desc && `${item?.desc?.ka}`} */}
+                {item?.desc && <div dangerouslySetInnerHTML={{ __html: item?.desc?.ka}}></div>}
                 {item?.location && <div className={styles.icontext}><img src={pin} alt='pin' /><p>{item?.location}</p></div>}
                 {item?.location && <div className={styles.icontext}><img src={post} alt='post' /><p>sale@mctrans.ge</p></div>}
                 {item?.location && <div className="d-flex justify-content-center align-items-center"><CustomButton >

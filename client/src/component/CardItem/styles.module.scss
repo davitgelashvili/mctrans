@@ -3,7 +3,7 @@
   border-radius: 16px;
   border: 1px solid rgba(#33434D, 0.11);
   overflow: hidden;
-  //font-family: 'MS Sans Serif', sans-serif;
+  margin: 15px 0;
 
   &__cover {
     width: 100%;
@@ -28,6 +28,10 @@
     line-height: 18px;
     text-wrap-mode: nowrap;
     font-weight: 700;
+
+    &--team {
+      background-color: #CEE1F2;
+    }
     
 
     @media (max-width: 1399px) {

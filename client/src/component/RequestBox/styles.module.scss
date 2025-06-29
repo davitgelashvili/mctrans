@@ -1,58 +1,53 @@
 .requestbox {
-    padding: 60px 0;
-
-    &__title {
-        width: 296;
-        height: 90;
-        top: 52.82px;
-        left: 80px;
-        font-family: DM Sans;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 45px;
-        letter-spacing: 0%;
-        vertical-align: middle;
-        color: #050B20;
-    }
-
-    &__desc {
-        font-family: DM Sans;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 22px;
-        letter-spacing: 0%;
-        vertical-align: middle;
-        width: 365;
-        height: 70;
-        top: 162.91px;
-        left: 80px;
-    }
 
     &__item {
         padding: 50px 80px;
         border-radius: 12px;
+        flex: 1;
 
-        @media (max-width: 1198px){
+        @media (max-width: 1200px) {
             padding: 30px 50px;
         }
 
-        a {
-            font-size: 14px;
-            color: #fff;
-            padding: 22px 60px;
+        @media (max-width: 991px) {
+            margin-bottom: 15px;
+        }
+
+        &--title {
+            max-width: 250px;
+            margin: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 45px;
+            color: #050B20;
+        }
+
+        &--desc {
+            margin: 0;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+        }
+
+        &--icon {
+            width: 100px;
         }
     }
-}
 
-.formobile {
-    @media (max-width: 1124px) {
+    &__link {
+        padding: 22px 60px;
+        color: #fff;
 
-    }
-}
-
-.formobile2 {
-    @media (max-width: 1124px) {
-        margin-top: 10px;
-
+        @media (max-width: 1200px) {
+            padding: 16px 30px;
+        }
+        img {
+            display: "block";
+            margin-left: 5px;
+            width: 13px;
+            height: 13px;
+            margin-top: 3px;
+        }
     }
 }
