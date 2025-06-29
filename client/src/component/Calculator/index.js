@@ -68,7 +68,7 @@ export const Calculator = () => {
                 title="კალკულატორი">
                 <div className='row'>
                     <div className='col-12'>
-                        <p>მანქანის ტიპი</p>
+                        <p className={styles.calculator__forp}>მანქანის ტიპი</p>
                         <div className='row'>
                             {cartype?.map(el => {
                                 return (
@@ -85,7 +85,7 @@ export const Calculator = () => {
                         </div>
                     </div>
                     <div className='col-auto'>
-                        <p>მანქანის საჭე</p>
+                        <p className={styles.calculator__forp}>მანქანის საჭე</p>
                         <div className='row'>
                             {sache?.map(el => {
                                 return (
@@ -102,7 +102,7 @@ export const Calculator = () => {
                         </div>
                     </div>
                     <div className='col-auto'>
-                        <p>მანქანის გაფორმება</p>
+                        <p className={styles.calculator__forp}>მანქანის გაფორმება</p>
                         <div className='row'>
                             {gaformeba?.map(el => {
                                 return (
@@ -120,33 +120,39 @@ export const Calculator = () => {
                     </div>
                     <div className='col-6'>
                         <div>
-                            <p>გამოშვების წელი</p>
-                            <select>
+                            <p className={styles.calculator__forp}>გამოშვების წელი</p>
+                            <select name="year" onChange={handleChange} className={styles.calculator__select} defaultValue={""}>
+                                <option disabled></option>
                                 <option disabled>2025</option>
                                 <option>2024</option>
+                                <option>2023</option>
                             </select>
                         </div>
                     </div>
                     <div className='col-6'>
                         <div>
-                            <p>ძრავის მოცულობა</p>
-                            <select>
+                            <p className={styles.calculator__forp}>ძრავის მოცულობა</p>
+                            <select name="engine" onChange={handleChange} className={styles.calculator__select} defaultValue={""}>
+                                <option disabled></option>
                                 <option disabled>1</option>
                                 <option>2.0</option>
+                                <option>2.5</option>
                             </select>
                         </div>
                     </div>
                     <div className='col-12'>
-                        <CustomButton>
-                            <p
-                                className={`${styles['calculator__btn']}`}
-                                onClick={() => setJami(Number(selected.cartype) + Number(selected.gaformeba) + Number(selected.sache))}>
+                        <div className='mt-5'>
+                            <CustomButton>
+                                <p
+                                    className={`${styles['calculator__btn']}`}
+                                    onClick={() => setJami(Number(selected.cartype) + Number(selected.gaformeba) + Number(selected.sache))}>
                                     {jami || '$'}
                                 </p>
-                        </CustomButton>
+                            </CustomButton>
+                        </div>
                     </div>
                 </div>
-            </Form> 
+            </Form>
         </div>
     )
 }

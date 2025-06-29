@@ -1,3 +1,25 @@
 .contact {
     display: block;
+    background-color: #F9FBFC;
+    padding: 30px;
+
+    h1 {
+        margin: 0;
+        max-width: 400px;
+    }
+
+
+    &__firstp {
+        margin: 0;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 35px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 13px 100px;
+    }
 }

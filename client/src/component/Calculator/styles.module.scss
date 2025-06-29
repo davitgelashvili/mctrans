@@ -6,6 +6,27 @@
     &__btn {
         width: 100%;
         padding: 13px 100px;
+        
+    }
+    
+
+    &__forp {
+        margin: 0;
+        padding-bottom: 18px;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 27.75px;
+
+    }
+
+
+    &__select {
+        width: 70%;
+        padding: 15px;
+        border: 0.8px solid #000000;
+        border-radius: 15px;
+        font-weight: 500;
+        font-size: 15px;
     }
 }
 

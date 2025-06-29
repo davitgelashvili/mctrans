@@ -2,4 +2,31 @@
     display: block;
     background-color: #F9FBFC;
     padding: 30px;
+
+    h1 {
+        margin: 0;
+        max-width: 400px;
+    }
+
+    &__firstp {
+        margin: 0;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+        padding-top: 15px;
+    }
+
+    &__secondp {
+        margin: 0;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 27.75px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    &__btn{
+        width: 100%;
+        padding: 13px 100px;
+    }
 }

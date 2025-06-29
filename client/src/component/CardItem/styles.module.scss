@@ -31,8 +31,11 @@
 
     &--team {
       background-color: #CEE1F2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    
+
 
     @media (max-width: 1399px) {
       padding: 15px;
@@ -62,13 +65,8 @@
 
 }
 
-.sectitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.icon{
+.icon {
   display: unset;
 }
 
@@ -146,8 +144,8 @@
     }
 
     @media (max-width: 768px) {
-        margin-right: -5px;
-    }    
+      margin-right: -5px;
+    }
   }
 }
 
@@ -158,6 +156,6 @@
   line-height: 30px;
 
   @media (max-width: 768px) {
-        margin-left: -10px;
-    }
+    margin-left: -10px;
+  }
 }

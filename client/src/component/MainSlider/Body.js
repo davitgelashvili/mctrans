@@ -9,6 +9,7 @@ import suv from "../../assets/icons/suv.svg"
 import kutxisS from "../../assets/icons/kutxisshavi.svg"
 import kutxisT from "../../assets/icons/kutxis2.svg"
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Body() {
@@ -21,6 +22,16 @@ export default function Body() {
         { link: "/test", icon: `${hybrid}`, name: "Hybrid" },
     ]
 
+    const navigate = useNavigate();
+
+    const InventoryHandleClick = () => {
+        navigate('/cars'); 
+    };
+
+    const ContactUsHandleClick = () => {
+        navigate('/contact'); 
+    };
+
 
     return (
         <div className={styles.body}>
@@ -31,15 +42,15 @@ export default function Body() {
             </h1>
             <div className={styles.btns}>
                 <CustomButton>
-                    <p className={styles.btn}>
+                    <p className={styles.btn} onClick={InventoryHandleClick}>
                         View Inventory
-                        <img src={kutxisT} alt='icon'/>
+                        <img src={kutxisT} alt='icon' />
                     </p>
                 </CustomButton>
                 <CustomButton light>
-                    <p className={`${styles.btn} ${styles.btn__white}`}>
+                    <p className={`${styles.btn} ${styles.btn__white}`} onClick={ContactUsHandleClick}>
                         Contact Us
-                        <img src={kutxisS} alt='icon'/>
+                        <img src={kutxisS} alt='icon' />
                     </p>
                 </CustomButton>
             </div>

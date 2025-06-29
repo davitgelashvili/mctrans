@@ -1,18 +1,55 @@
 import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import { Form } from '../Form';
+import { CustomButton } from '../Common/CustomButton';
+import contactimg1 from "../../assets/images/contactimg1.svg"
+import contactimg2 from "../../assets/images/contactimg2.svg"
+import contactimg3 from "../../assets/images/contactimg3.svg"
+import { CustomInput } from '../Common/CustomInput';
 
 export const Contact = () => {
 
+    const [values, setValues] = useState({
+        fullname: "",
+        phonenumber: "",
+    })
+
+    function handleChange(e) {
+        setValues({
+            ...values
+        })
+    }
 
     return (
         <div className={`${styles['contact']}`}>
             <Form
-                smallImage1="1"
-                smallImage2="2"
-                bigImage="3"
-                title="კონტაქტი">
-                1111
+                smallImage1={contactimg2}
+                smallImage2={contactimg3}
+                bigImage={contactimg1}
+                title="Fill Form">
+                <div>
+                    <p className={styles.contact__firstp}>One step closer to your new car! Just complete the short 
+                        form and our sales manager will contact you shortly.</p>
+                    <CustomInput
+                        type={'text'}
+                        title={'Full name'}
+                        name={'fullname'}
+                        value={values.fullname}
+                        placeholder={'Enter your full name'}
+                        onChange={handleChange}
+                    />
+                    <CustomInput
+                        type={'text'}
+                        title={'Phone number'}
+                        name={'phonenumber'}
+                        value={values.phonenumber}
+                        placeholder={'Enter your phone number'}
+                        onChange={handleChange}
+                    />
+                    <CustomButton>
+                        <p className={styles.contact__btn}>Submit Form</p>
+                    </CustomButton>
+                </div>
             </Form>
         </div>
     )

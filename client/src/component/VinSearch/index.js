@@ -27,26 +27,26 @@ export const VinSearch = () => {
                 bigImage={calcbigimg}
                 title="INTERNATIONAL SHIPPING COMPANY">
                 <div>
-                    <p>Vehicle information</p>
-                    <p>Enter VIN code or Enter container number</p>
+                    <p className={styles.vin__firstp}>Vehicle information</p> 
+                    <p className={styles.vin__secondp}>Enter VIN code or Enter container number</p>
                     <CustomInput
                         type={'text'}
-                        title={'vin code'}
+                        title={'VIN code'}
                         name={'vin'}
                         value={values.vin}
-                        placeholder={'enter vin code'}
+                        placeholder={'Enter VIN code'}
                         onChange={handleChange}
                     />
                     <CustomInput
                         type={'text'}
-                        title={'container number'}
+                        title={'Container number'}
                         name={'container'}
                         value={values.container}
-                        placeholder={'enter container number'}
+                        placeholder={'Enter container number'}
                         onChange={handleChange}
                     />
                     <CustomButton>
-                        <p>Search</p>
+                        <p className={styles.vin__btn}>Search</p>
                     </CustomButton>
                 </div>
             </Form>
