@@ -9,9 +9,14 @@
         padding-bottom: 20px;
         color: #050B20;
 
-        &--forcontact{
+        &--forcontact {
             text-align: center;
             margin: 0;
+
+            @media (max-width: 1024px) {
+                text-align: left;
+                padding-top: 10px;
+            }
         }
     }
 
@@ -40,8 +45,13 @@
                 font-weight: 500;
                 font-size: 15px;
                 line-height: 43.87px;
-                margin-right: 40px;
-                
+                display: flex;
+                min-width: 135px;
+                text-align: left;
+
+                @media (max-width: 1024px) {
+                    min-width: 170px;
+                }
             }
         }
     }
@@ -63,6 +73,7 @@
             list-style: none;
             display: inline;
 
+
             a {
                 text-decoration: none;
                 font-family: Font Awesome 5 Brands;
@@ -70,6 +81,8 @@
                 font-size: 15px;
                 line-height: 15px;
                 padding-right: 30px;
+
+
             }
         }
     }
