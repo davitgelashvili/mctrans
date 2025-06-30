@@ -12,25 +12,16 @@ export const Header = () => {
         <header className={styles.header}>
             <div className={`${styles.header__content} d-flex align-items-center justify-content-between`}>
                 <Logo />
-                <BrowserView>
-                    {/* <Menu /> */}
-                </BrowserView>
-                <div className="order-2 order-md-">
+                <div className="order-2 order-lg-1">
                         {isMenu && <Menu />}
                 </div>
-                <div className={`order-1 order-md-2 ${styles.btnmobile}`}>
+                <div className={`order-1 order-lg-2 ${styles.btnmobile}`}>
                     <CustomButton >
                         <Link to={'/contact'} className={styles['header__btn--link']}>
                             მოთხოვნის გაგზავნა
                         </Link>
                     </CustomButton>
                 </div>
-                <MobileView>
-                    <button onClick={() => setIsMenu(!isMenu)}>
-                        {isMenu && <p>close</p>}
-                        {!isMenu && <p>open</p>}
-                    </button>
-                </MobileView>
             </div>
         </header>
     )

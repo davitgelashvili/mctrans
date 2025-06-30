@@ -9,15 +9,15 @@ export const Footer = () => {
   return (
     <footer className={styles['footer']}>
       <div className='row'>
-        <div className='col-md-4'> 
+        <div className='col-lg-4'> 
           <Logo />
         </div>
-        <div className='col-md-8'>
+        <div className='col-lg-8'>
           <div className='row'>
             <div className='col-md-6'>
               <Menu />
             </div>
-            <div className='col-md-6 d-flex flex-md-row flex-column justify-content-between'>
+            <div className='col-md-6 d-flex flex-sm-row flex-column justify-content-between'>
               <WorkInfo />
               <Contact />
             </div>

@@ -55,7 +55,6 @@ export const SalesManagers = () => {
     const settings = {
         infinite: true,
         arrows: true,
-        centerPadding: '60px',
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -78,7 +77,8 @@ export const SalesManagers = () => {
             {
                 breakpoint: 769,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
+                    centerMode: true,
                 }
             }
         ]

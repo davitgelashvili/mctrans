@@ -8,9 +8,9 @@ import twitter from "../../../assets/icons/twitter.svg"
 
 export const Contact = () => {
   return (
-    <div>
-      <h3 className={styles['footer__title--forcontact']}>Connect With Us</h3>
-      <ul className={styles['footer__social']}>
+    <div className={styles['footer__social']}>
+      <h3 className={styles['footer__title']}>Connect With Us</h3>
+      <ul className={styles['footer__social--list']}>
         <li>
           <Link to="">
             <img src={facebook} alt='icon' /> 

@@ -13,7 +13,7 @@ export const Form = ({smallImage1,smallImage2, bigImage, title, children}) => {
                     </div>
                     <div className="col-md-7">
                         <div className={`${styles['form']}`}>
-                            <h1>{title}</h1>
+                            <h1 className={`${styles['form__title']}`}>{title}</h1>
                             {children}
                         </div>
                     </div>

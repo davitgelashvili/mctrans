@@ -48,7 +48,7 @@ export default function Body() {
                     </p>
                 </CustomButton>
                 <CustomButton light>
-                    <p className={`${styles.btn} ${styles.btn__white}`} onClick={ContactUsHandleClick}>
+                    <p className={`${styles.btn} `} onClick={ContactUsHandleClick}>
                         Contact Us
                         <img src={kutxisS} alt='icon' />
                     </p>

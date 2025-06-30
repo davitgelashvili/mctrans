@@ -21,13 +21,14 @@
     }
 
     &__logo {
-        width: 75%;
+        max-width: 472px;
+        width: 100%;
         margin: 0;
         padding: 0;
         cursor: pointer;
 
-        @media (max-width: 1024px) {
-            width: 100%;
+        @media (max-width: 990px) {
+            max-width: 300px;
         }
 
         img {
@@ -36,8 +37,12 @@
     }
 
     &__menu {
+        margin: 0;
+        padding: 0;
+
         li {
             list-style: none;
+            padding-right: 20px;
 
             a {
                 text-decoration: none;
@@ -45,23 +50,17 @@
                 font-weight: 500;
                 font-size: 15px;
                 line-height: 43.87px;
-                display: flex;
-                min-width: 135px;
                 text-align: left;
-
-                @media (max-width: 1024px) {
-                    min-width: 170px;
-                }
             }
         }
     }
 
     &__work {
         display: block;
+        padding-right: 20px;
 
         p {
             margin: 0;
-            font-family: DM Sans;
             font-weight: 400;
             font-size: 15px;
             line-height: 30.5px;
@@ -69,20 +68,26 @@
     }
 
     &__social {
-        li {
-            list-style: none;
-            display: inline;
+        display: block;
 
+        &--list {
+            margin: 0;
+            padding: 0;
+            margin-left: -15px;
+            margin-right: -15px;
 
-            a {
-                text-decoration: none;
-                font-family: Font Awesome 5 Brands;
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 15px;
-                padding-right: 30px;
+            li {
+                list-style: none;
+                display: inline;
+                padding: 0 15px;
 
-
+                a {
+                    text-decoration: none;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 15px;
+                    padding: 4px;
+                }
             }
         }
     }
