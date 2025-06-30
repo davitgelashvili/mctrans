@@ -3,6 +3,16 @@
 
     &__title {
         margin: 0;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        padding-bottom: 20px;
+        color: #050B20;
+
+        &--forcontact{
+            text-align: center;
+            margin: 0;
+        }
     }
 
     &__logo {
@@ -26,7 +36,7 @@
                 font-weight: 500;
                 font-size: 15px;
                 line-height: 43.87px;
-                margin-right: 15px;
+                margin-right: 40px;
             }
         }
     }
@@ -36,15 +46,25 @@
 
         p {
             margin: 0;
+            font-family: DM Sans;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 37.5px;
         }
     }
 
     &__social {
         li {
             list-style: none;
+            display: inline;
 
             a {
                 text-decoration: none;
+                font-family: Font Awesome 5 Brands;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 15px;
+                padding-right: 30px;
             }
         }
     }

@@ -6,25 +6,25 @@ export const Menu = () => {
   return (
     <ul className={`${styles['footer__menu']} d-flex flex-row flex-wrap`}>
       <li>
-        <Link to="">მთავარი</Link>
+        <Link to="/">მთავარი</Link>
       </li>
       <li>
-        <Link to="">MS Trans ლაუნჯი</Link>
+        <Link to="/cars">MS Trans ლაუნჯი</Link>
       </li>
       <li>
-        <Link to="">გაყიდვების გუნდი</Link>
+        <Link to="/teams">გაყიდვების გუნდი</Link>
       </li>
       <li>
-        <Link to="">VIN: ძებნა</Link>
+        <Link to="/vin">VIN: ძებნა</Link>
       </li>
       <li>
-        <Link to="">სიახლეები</Link>
+        <Link to="/news">სიახლეები</Link>
       </li>
       <li>
-        <Link to="">კატალოფები</Link>
+        <Link to="/cars">კატალოფები</Link>
       </li>
       <li>
-        <Link to="">განბაჟება</Link>
+        <Link to="/calculator">განბაჟება</Link>
       </li>
     </ul> 
   )
