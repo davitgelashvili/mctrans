@@ -49,9 +49,12 @@
     }
 
     &__text {
+        margin: 0;
         border: 1px solid #000000;
         border-radius: 12px;
         padding: 14px 19px;
+        margin-bottom: 50px;
+        margin-top: 18px;
         font-size: 15px;
         line-height: 30px;
     }

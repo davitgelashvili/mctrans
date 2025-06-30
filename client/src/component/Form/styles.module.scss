@@ -8,6 +8,13 @@
     border-radius: 22px;
     border: 1px solid #33434D1C;
     padding: 19px 33px;
+
+    &__title{
+        margin: 0;
+        padding: 0;
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
 }
 
 .cover {
