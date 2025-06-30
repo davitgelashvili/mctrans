@@ -21,7 +21,7 @@ export const Menu = () => {
         <Link to="/news">სიახლეები</Link>
       </li>
       <li>
-        <Link to="/cars">კატალოფები</Link>
+        <Link to="/cars">კატალოგები</Link>
       </li>
       <li>
         <Link to="/calculator">განბაჟება</Link>

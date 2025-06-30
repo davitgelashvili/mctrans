@@ -21,6 +21,10 @@
         padding: 0;
         cursor: pointer;
 
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+
         img {
             width: 100%;
         }
@@ -37,6 +41,7 @@
                 font-size: 15px;
                 line-height: 43.87px;
                 margin-right: 40px;
+                
             }
         }
     }
@@ -49,7 +54,7 @@
             font-family: DM Sans;
             font-weight: 400;
             font-size: 15px;
-            line-height: 37.5px;
+            line-height: 30.5px;
         }
     }
 
