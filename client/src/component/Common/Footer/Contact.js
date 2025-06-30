@@ -9,7 +9,7 @@ export const Contact = () => {
       <ul className={styles['footer__social']}>
         <li>
           <Link to="">
-            <img src='' alt='icon' />
+            <img src='' alt='icon' /> 
           </Link>
         </li>
         <li>

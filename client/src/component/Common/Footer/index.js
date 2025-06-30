@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <footer className={styles['footer']}>
       <div className='row'>
-        <div className='col-4'>
+        <div className='col-4'> 
           <Logo />
         </div>
         <div className='col-8'>

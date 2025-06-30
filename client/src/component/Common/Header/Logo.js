@@ -2,7 +2,7 @@ import React from 'react'
 import logo from "../../../assets/images/logo.png"
 import smallLogo from "../../../assets/images/small_logo.png"
 import styles from './styles.module.scss'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Logo() {
 

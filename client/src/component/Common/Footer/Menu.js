@@ -6,11 +6,26 @@ export const Menu = () => {
   return (
     <ul className={`${styles['footer__menu']} d-flex flex-row flex-wrap`}>
       <li>
-        <Link to="">erti</Link>
+        <Link to="">მთავარი</Link>
       </li>
       <li>
-        <Link to="">ori</Link>
+        <Link to="">MS Trans ლაუნჯი</Link>
       </li>
-    </ul>
+      <li>
+        <Link to="">გაყიდვების გუნდი</Link>
+      </li>
+      <li>
+        <Link to="">VIN: ძებნა</Link>
+      </li>
+      <li>
+        <Link to="">სიახლეები</Link>
+      </li>
+      <li>
+        <Link to="">კატალოფები</Link>
+      </li>
+      <li>
+        <Link to="">განბაჟება</Link>
+      </li>
+    </ul> 
   )
 }

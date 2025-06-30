@@ -7,7 +7,7 @@ export const WorkInfo = () => {
       <h3 className={styles['footer__title']}>sale hourse</h3>
       <p>erti</p>
       <p>ori</p>
-      <p>sami</p>
+      <p>sami</p> 
     </div>
   )
 }
