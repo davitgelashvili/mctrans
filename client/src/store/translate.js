@@ -4,8 +4,6 @@ let initalData = {
     language: ''
 }
 
-
-
 const siteTranslate = createSlice({
     name: 'language',
     initialState: initalData,

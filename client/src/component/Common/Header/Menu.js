@@ -4,14 +4,16 @@ import logo from "../../../assets/images/logo.png"
 import burger from "../../../assets/icons/burger.svg"
 import ixsiki from "../../../assets/icons/ixsiki.svg"
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 export default function Menu() {
-
   const [isOpen, setIsOpen] = useState(false)
+  const { t } = useTranslation();
+
 
   const data = [
-    { link: "/", title: "მთავარი" },
-    { link: "/news", title: "სიახლეები" },
+    { link: "/", title: t("menu.home") },
+    { link: "/news", title: t("menu.news") },
     { link: "/cars", title: "MS Trans ლაუნჯი" },
     { link: "/cars", title: "კატალოგები" },
     { link: "/teams", title: "გაყიდვების გუნდი" },
