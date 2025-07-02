@@ -91,6 +91,10 @@
         font-size: 15px;
         text-align: center;
 
+        @media (max-width: 1200px) {
+            padding: 19px 30px;
+        }
+
         @media (max-width: 1124px) {
             padding: 10px 30px;
             font-weight: 200;

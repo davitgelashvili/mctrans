@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import styles from './styles.module.scss'
 import { Form } from '../Form';
 import { CustomButton } from '../Common/CustomButton';
@@ -16,9 +17,23 @@ export const Contact = () => {
 
     function handleChange(e) {
         setValues({
-            ...values
+            ...values,
+            [e.target.name]: e.target.value
         })
     }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await axios.post('http://localhost:5000/api/contact', {
+                name: values.fullname,
+                phone: values.phonenumber,
+            });
+            alert('მაილი გაიგზავნა წარმატებით');
+        } catch (err) {
+            alert('დაფიქსირდა შეცდომა');
+        }
+    };
 
     return (
         <div className={`${styles['contact']}`}>
@@ -28,7 +43,7 @@ export const Contact = () => {
                 bigImage={contactimg1}
                 title="Fill Form">
                 <div>
-                    <p className={styles.contact__firstp}>One step closer to your new car! Just complete the short 
+                    <p className={styles.contact__firstp}>One step closer to your new car! Just complete the short
                         form and our sales manager will contact you shortly.</p>
                     <CustomInput
                         type={'text'}
@@ -47,7 +62,7 @@ export const Contact = () => {
                         onChange={handleChange}
                     />
                     <CustomButton>
-                        <p className={styles.contact__btn}>Submit Form</p>
+                        <p className={styles.contact__btn} onClick={handleSubmit}>Submit Form</p>
                     </CustomButton>
                 </div>
             </Form>
