@@ -19,16 +19,16 @@ export const WhyUs = () => {
             <div className={`${styles['']}`}>
                 <div className='row'>
                     <div className='col-12 col-md-6 col-lg-3'>
-                        <Item icon={expoffers} title="Special Financing Offers" item="Our stress-free finance department that can find financial solutions to save you money"/>
+                        <Item icon={expoffers} title={t("why.title1")} item={t("why.item")}/>
                     </div>
                     <div className='col-12 col-md-6 col-lg-3'>
-                        <Item icon={dealership} title="Trusted Car Dealership" item="Our stress-free finance department that can find financial solutions to save you money"/>
+                        <Item icon={dealership} title={t("why.title2")} item={t("why.item")}/>
                     </div>
                     <div className='col-12 col-md-6 col-lg-3'>
-                        <Item icon={expricing} title="Transparent Pricing" item="Our stress-free finance department that can find financial solutions to save you money"/>
+                        <Item icon={expricing} title={t("why.title3")} item={t("why.item")}/>
                     </div>
                     <div className='col-12 col-md-6 col-lg-3'>
-                        <Item icon={service} title="Expert Car Service" item="Our stress-free finance department that can find financial solutions to save you money"/>
+                        <Item icon={service} title={t("why.title4")} item={t("why.item")}/>
                     </div>
                 </div> 
             </div>
