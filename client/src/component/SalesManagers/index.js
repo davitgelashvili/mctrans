@@ -10,8 +10,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import rightarrow from "../../assets/icons/rightarrow.svg"
 import leftarrow from "../../assets/icons/leftarrow.svg"
+import { useTranslation } from 'react-i18next';
 
 export const SalesManagers = () => {
+    const { t } = useTranslation();
     const [data, setData] = useState();
     const [params, setParams] = useState({
         page: 1,
@@ -85,7 +87,7 @@ export const SalesManagers = () => {
     };
 
     return (
-        <Section smollTitle={'გაყიდვების გუნდი'} background>
+        <Section smollTitle={t("sale.team")} background>
             <div className={`${styles['salesmanager']}`}>
                 {!data && <Loading />}
                 <div className='row'>

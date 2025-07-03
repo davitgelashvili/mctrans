@@ -6,6 +6,11 @@ import requestbox from './../component/RequestBox/requestbox.module'
 import carditem from './../component/CardItem/carditem.module'
 import footer from './../component/Common/Footer/footer.module'
 import calculator from './../component/Calculator/calculator.module'
+import vinsearch from './../component/VinSearch/vinsearch.module'
+import loungecars from './../component/LoungeCars/loungecars.module'
+import salemanager from './../component/SalesManagers/salesmanager.module'
+import news from './../component/News/news.module'
+import whyus from './../component/WhyUs/whyus.module'
 
 i18n
     .use(initReactI18next)
@@ -20,6 +25,11 @@ i18n
                     ...carditem.en,
                     ...footer.en,
                     ...calculator.en,
+                    ...vinsearch.en,
+                    ...loungecars.en,
+                    ...salemanager.en,
+                    ...news.en,
+                    ...whyus.en,
                 }
             },
             ka: {
@@ -30,6 +40,11 @@ i18n
                     ...carditem.ka,
                     ...footer.ka,
                     ...calculator.ka,
+                    ...vinsearch.ka,
+                    ...loungecars.ka,
+                    ...salemanager.ka,
+                    ...news.ka,
+                    ...whyus.ka,
                 }
             },
             ru: {
@@ -40,6 +55,11 @@ i18n
                     ...carditem.ru,
                     ...footer.ru,
                     ...calculator.ru,
+                    ...vinsearch.ru,
+                    ...loungecars.ru,
+                    ...salemanager.ru,
+                    ...news.ru,
+                    ...whyus.ru,
                 }
             }
         }

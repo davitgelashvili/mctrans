@@ -8,11 +8,14 @@ import expoffers from "../../assets/icons/expoffers.svg"
 import dealership from "../../assets/icons/dealership.svg"
 import expricing from "../../assets/icons/expricing.svg"
 import service from "../../assets/icons/service.svg"
+import { useTranslation } from 'react-i18next';
 
 export const WhyUs = () => {
 
+    const { t } = useTranslation();
+
     return (
-        <Section bigTitle={'რატომ ჩვენ ?'} background> 
+        <Section bigTitle={t("why.text")} background> 
             <div className={`${styles['']}`}>
                 <div className='row'>
                     <div className='col-12 col-md-6 col-lg-3'>

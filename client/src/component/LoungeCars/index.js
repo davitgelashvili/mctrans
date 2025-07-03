@@ -10,9 +10,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import rightarrow from "../../assets/icons/rightarrow.svg"
 import leftarrow from "../../assets/icons/leftarrow.svg"
-
+import { useTranslation } from 'react-i18next';
 
 export const LoungeCars = () => {
+    const { t } = useTranslation();
     const [data, setData] = useState();
     const [params, setParams] = useState({
         page: 1,
@@ -88,7 +89,7 @@ export const LoungeCars = () => {
     };
 
     return (
-        <Section smollTitle={'მანქანები'} background>
+        <Section smollTitle={t("lounge.car")} background>
             <div className={`${styles['cars']}`}>
                 {!data && <Loading />}
                 <Slider {...settings}>

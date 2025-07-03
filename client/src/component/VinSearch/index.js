@@ -6,8 +6,12 @@ import calcbigimg from "../../assets/images/calcbigimg.svg"
 import calcimg1 from "../../assets/images/calcimg1.svg"
 import calcimg2 from "../../assets/images/calcimg2.svg"
 import { CustomInput } from '../Common/CustomInput';
+import { useTranslation } from 'react-i18next';
 
 export const VinSearch = () => {
+
+    const { t } = useTranslation();
+
     const [values, setValues] = useState({
         vin: "",
         container: "",
@@ -25,28 +29,28 @@ export const VinSearch = () => {
                 smallImage1={calcimg1}
                 smallImage2={calcimg2}
                 bigImage={calcbigimg}
-                title="INTERNATIONAL SHIPPING COMPANY">
+                title={t("vin.company")}>
                 <div>
-                    <p className={styles.vin__firstp}>Vehicle information</p> 
-                    <p className={styles.vin__secondp}>Enter VIN code or Enter container number</p>
+                    <p className={styles.vin__firstp}>{t("vin.info")}</p> 
+                    <p className={styles.vin__secondp}>{t("vin.code")}</p>
                     <CustomInput
                         type={'text'}
-                        title={'VIN code'}
+                        title={t("vin.title1")}
                         name={'vin'}
                         value={values.vin}
-                        placeholder={'Enter VIN code'}
+                        placeholder={t("vin.plholder1")}
                         onChange={handleChange}
                     />
                     <CustomInput
                         type={'text'}
-                        title={'Container number'}
+                        title={t("vin.title2")}
                         name={'container'}
                         value={values.container}
-                        placeholder={'Enter container number'}
+                        placeholder={t("vin.plholder2")}
                         onChange={handleChange}
                     />
                     <CustomButton>
-                        <p className={styles.vin__btn}>Search</p>
+                        <p className={styles.vin__btn}>{t("vin.search")}</p>
                     </CustomButton>
                 </div>
             </Form>

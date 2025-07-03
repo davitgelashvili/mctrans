@@ -4,9 +4,12 @@ import getApi from '../../http/getApi';
 import Loading from '../Loading/Loading';
 import { CardItem } from '../CardItem';
 import { Section } from '../Common/Section';
+import { useTranslation } from 'react-i18next';
 
 export const News = () => {
+    
     const [data, setData] = useState();
+    const { t } = useTranslation();
     const [params, setParams] = useState({
         page: 1,
         limit: 20
@@ -29,7 +32,7 @@ export const News = () => {
     }, [params]);
 
     return (
-        <Section smollTitle={'Blog'}>
+        <Section smollTitle={t("news.blog")}>
             <div className={`${styles['lastblog']}`}>
                     {!data && <Loading />}
                     <div className='row'>
