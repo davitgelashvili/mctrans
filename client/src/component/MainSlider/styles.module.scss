@@ -1,11 +1,11 @@
 .slider {
-    height: calc(60vh);
+    height: calc(100vh - 200px);
     display: flex;
     align-items: center;
     position: relative;
 
-    @media (max-width: 1124px) {
-        height: calc(35vh);
+    @media (max-width: 991px) {
+        height: unset
     }
 }
 
@@ -19,12 +19,6 @@
     position: absolute;
     right: 0;
     top: 0;
-
-
-    @media (max-width: 768px) {
-        width: 220;
-        height: 191;
-    }
 }
 
 .body {
@@ -36,7 +30,7 @@
         font-weight: 400;
         font-size: 15px;
 
-        @media (max-width: 1124px) {
+        @media (max-width: 991px) {
             font-weight: 500;
             font-size: 13px;
         }
@@ -49,7 +43,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
 
-        @media (max-width: 1124px) {
+        @media (max-width: 991px) {
             font-weight: 500;
             font-size: 13px;
             line-height: 13.75px;
@@ -58,11 +52,10 @@
 
     .title {
         margin: 0;
-        font-family: DM Sans;
         font-weight: 700;
         font-size: 70px;
 
-        @media (max-width: 1124px) {
+        @media (max-width: 991px) {
             font-weight: 700;
             font-size: 20px;
         }
@@ -95,15 +88,12 @@
             padding: 19px 30px;
         }
 
-        @media (max-width: 1124px) {
-            padding: 10px 30px;
-            font-weight: 200;
-            font-size: 10px;
-            white-space: nowrap;
-        }
 
         @media (max-width: 991px) {
             padding: 10px;
+            font-weight: 200;
+            font-size: 10px;
+            white-space: nowrap;
         }
 
         img {
