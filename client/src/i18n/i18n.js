@@ -11,6 +11,9 @@ import loungecars from './../component/LoungeCars/loungecars.module'
 import salemanager from './../component/SalesManagers/salesmanager.module'
 import news from './../component/News/news.module'
 import whyus from './../component/WhyUs/whyus.module'
+import lastblog from './../component/LastBlog/lastblog.module'
+import teams from './../component/Teams/teams.module'
+import cars from './../component/Cars/cars.module'
 
 i18n
     .use(initReactI18next)
@@ -30,6 +33,9 @@ i18n
                     ...salemanager.en,
                     ...news.en,
                     ...whyus.en,
+                    ...lastblog.en,
+                    ...teams.en,
+                    ...cars.en,
                 }
             },
             ka: {
@@ -45,6 +51,9 @@ i18n
                     ...salemanager.ka,
                     ...news.ka,
                     ...whyus.ka,
+                    ...lastblog.ka,
+                    ...teams.ka,
+                    ...cars.ka,
                 }
             },
             ru: {
@@ -60,6 +69,9 @@ i18n
                     ...salemanager.ru,
                     ...news.ru,
                     ...whyus.ru,
+                    ...lastblog.ru,
+                    ...teams.ru,
+                    ...cars.ru,
                 }
             }
         }

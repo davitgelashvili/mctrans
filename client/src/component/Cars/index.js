@@ -10,9 +10,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-
+import { useTranslation } from 'react-i18next';
 
 export const Cars = () => {
+    const { t } = useTranslation();
     const [data, setData] = useState();
     const [params, setParams] = useState({
         page: 1,
@@ -36,7 +37,7 @@ export const Cars = () => {
     }, [params]);
 
     return (
-        <Section smollTitle={'მანქანები'} background>
+        <Section smollTitle={t("cars.text")} background>
             <div className={`${styles['cars']}`}>
                 {!data && <Loading />}
                 <div className='row'>

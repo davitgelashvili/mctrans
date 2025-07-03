@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import { CardItem } from '../CardItem';
 import { Section } from '../Common/Section';
+import { useTranslation } from 'react-i18next';
 
 export const LastBlog = () => {
+    const { t } = useTranslation();
     const [data, setData] = useState();
     const [params, setParams] = useState({
         page: 1,
@@ -30,7 +32,7 @@ export const LastBlog = () => {
     }, [params]);
 
     return (
-        <Section bigTitle={'Latest Blog Posts'}>
+        <Section bigTitle={t("latest.text")}>
             <div className={`${styles['lastblog']}`}>
                     {!data && <Loading />}
                     <div className='row'>

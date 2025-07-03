@@ -43,9 +43,9 @@ module.exports = {
             vin: "VIN:Поиск",
             hour: "Часы продаж",
             connect: "Свяжитесь с нами",
-            dro1: "test",
-            dro2: "test",
-            dro3: "test",
+            dro1: "тест",
+            dro2: "тест",
+            dro3: "тест",
         }
     }
 }
