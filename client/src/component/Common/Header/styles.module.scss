@@ -26,7 +26,7 @@
             color: #fff;
             text-wrap-mode: nowrap;
 
-            @media (max-width: 1124px) {
+            @media (max-width: 991px) {
                 padding: 10px 45px;
             }
         }
@@ -100,34 +100,29 @@
     }
 
     &__minibox {
-        width: 350px;
         height: 10px;
-        padding: 10px;
-        background-color: #f8f9fa;
+        padding: 14px 22px;
         border-radius: 12px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        font-weight: 500;
         transition: transform 0.2s ease;
         text-align: left;
         background-color: #606E8D;
         color: white;
         text-decoration: none;
-        font-family: Karla;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 20px;
-        letter-spacing: 0%;
-        vertical-align: middle;
         padding-bottom: 34px;
 
         &:hover {
             background-color: #405FF2;
         }
+
+         
     }
 
     &__boxrow {
         display: grid;
-        justify-content: center;
-        gap: 1rem;
+        gap: 16px;
         flex-wrap: wrap;
         padding: 1rem;
 

@@ -7,8 +7,12 @@ import { Link } from 'react-router-dom'
 import electricCar from "../../assets/icons/electric-car.svg.svg"
 import electricCar2 from "../../assets/icons/electric-car2.svg"
 import kutxis2 from "../../assets/icons/kutxis2.svg"
+import { useTranslation } from 'react-i18next';
+
 
 export const RequestBox = () => {
+    const { t } = useTranslation();
+
     return (
         <Section>
             <div className={styles['requestbox']}>
@@ -16,13 +20,13 @@ export const RequestBox = () => {
                     <div className={`col-12 col-lg-6 d-flex`}>
                         <Box
                             color={'#E9F2FF'}
-                            title={'ეძებ ახალ მანქანას ? '}
-                            desc={'ჩვენ მოწადინებულნი ვართ ჩვენს მომხმარებლებს უზრუნველვყოთ გამორჩეული მომსახურება'}
+                            title={t('request.box1')}
+                            desc={t('request.box1txt')}
                             icon={electricCar}
                         >
                             <CustomButton>
-                                <Link to={'/test'} className={styles['requestbox__link']}>
-                                    მოთხოვნის გაგზავნა 
+                                <Link to={'/contact'} className={styles['requestbox__link']}>
+                                    {t('request.contact')}
                                     <img src={kutxis2} alt='kutxis2'/>
                                 </Link>
                             </CustomButton>
@@ -31,14 +35,14 @@ export const RequestBox = () => {
                     <div className={`col-12 col-lg-6 d-flex`}>
                         <Box
                             color={'#FFE9F3'}
-                            title={'გახდი ჩვენი დილერი'}
-                            desc={'გახდი ჩვენი მანქანების ოფიციალური დილერი დარჩი კმაყოფილი ჩვენი სერვისით !'}
+                            title={t('request.box2')}
+                            desc={t('request.box2txt')}
                             icon={electricCar2}
 
                         >
                             <CustomButton dark>
-                                <Link to={'/test'} className={styles['requestbox__link']} >
-                                    მოთხოვნის გაგზავნა 
+                                <Link to={'/contact'} className={styles['requestbox__link']} >
+                                    {t('request.contact')}
                                     <img src={kutxis2} alt='kutxis2'/>
                                 </Link>
                             </CustomButton>

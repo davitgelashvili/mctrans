@@ -1,6 +1,6 @@
 module.exports = {
     en: {
-        menu: {
+        footer: {
             home: 'Home',
             news: 'News',
             mstrans: "MS Trans Lounge",
@@ -8,12 +8,16 @@ module.exports = {
             salesteam: "Sales team",
             customcl: "Get Customs clearance",
             vin: "VIN:search",
-            send: "Send request"
+            hour: "Sale Hours",
+            connect: "Connect With Us",
+            dro1: "Monday - Friday: 09:00AM - 09:00 PM",
+            dro2: "Saturday: 09:00AM - 07:00PM ",
+            dro3: "Sunday: Closed",
         }
 
     },
     ka: {
-        menu: {
+        footer: {
             home: 'მთავარი',
             news: 'სიახლეები',
             mstrans: "MS Trans ლაუნჯი",
@@ -21,11 +25,15 @@ module.exports = {
             salesteam: "გაყიდვების გუნდი",
             customcl: "განბაჟება",
             vin: "VIN:ძებნა",
-            send: "მოთხოვნის გაგზავნა"
+            hour: "გაყიდვის საათები",
+            connect: "დაკავშირება ჩვენთან",
+            dro1: "სატესტო",
+            dro2: "სატესტო",
+            dro3: "სატესტო",
         }
     },
     ru: {
-        menu: {
+        footer: {
             home: 'основной',
             news: 'новости',
             mstrans: "MS Транс Лаундж",
@@ -33,7 +41,11 @@ module.exports = {
             salesteam: "отдел продаж",
             customcl: "таможенное оформление",
             vin: "VIN:Поиск",
-            send: "Отправить запрос"
+            hour: "Часы продаж",
+            connect: "Свяжитесь с нами",
+            dro1: "test",
+            dro2: "test",
+            dro3: "test",
         }
     }
 }

@@ -6,10 +6,12 @@ import { CustomButton } from '../Common/CustomButton';
 import calcbigimg from "../../assets/images/calcbigimg.svg"
 import calcimg1 from "../../assets/images/calcimg1.svg"
 import calcimg2 from "../../assets/images/calcimg2.svg"
+import { useTranslation } from 'react-i18next';
 
 
 export const Calculator = () => {
     const [jami, setJami] = useState('')
+    const { t } = useTranslation();
     const [selected, seSelected] = useState({
         cartype: "",
         sache: "",
@@ -24,37 +26,37 @@ export const Calculator = () => {
     const cartype = [
         {
             value: "400",
-            text: "ბენზინი/დიზელი"
+            text: t("calculator.oil")
         },
         {
             value: "800",
-            text: "ელექტრო"
+            text: t("calculator.electric")
         },
         {
             value: "450",
-            text: "ჰიბრიდი"
+            text: t("calculator.hybrid")
         },
     ]
 
     const sache = [
         {
             value: "150",
-            text: "მარცხენა"
+            text: t("calculator.left")
         },
         {
             value: "250",
-            text: "მარჯვენა"
+            text: t("calculator.right")
         }
     ]
 
     const gaformeba = [
         {
             value: "400",
-            text: "ერთმაგი"
+            text: t("calculator.single")
         },
         {
             value: "700",
-            text: "ორმაგი"
+            text: t("calculator.double")
         }
     ]
 
@@ -65,10 +67,10 @@ export const Calculator = () => {
                 smallImage1={calcimg1}
                 smallImage2={calcimg2}
                 bigImage={calcbigimg}
-                title="კალკულატორი">
+                title={t("calculator.calcul")}>
                 <div className='row'>
                     <div className='col-12'>
-                        <p className={styles.calculator__forp}>მანქანის ტიპი</p>
+                        <p className={styles.calculator__forp}>{t("calculator.cartype")}</p>
                         <div className='row'>
                             {cartype?.map(el => {
                                 return (
@@ -85,7 +87,7 @@ export const Calculator = () => {
                         </div>
                     </div>
                     <div className='col-auto'>
-                        <p className={styles.calculator__forp}>მანქანის საჭე</p>
+                        <p className={styles.calculator__forp}>{t("calculator.wheel")}</p>
                         <div className='row'>
                             {sache?.map(el => {
                                 return (
@@ -102,7 +104,7 @@ export const Calculator = () => {
                         </div>
                     </div>
                     <div className='col-auto'>
-                        <p className={styles.calculator__forp}>მანქანის გაფორმება</p>
+                        <p className={styles.calculator__forp}>{t("calculator.decoration")}</p>
                         <div className='row'>
                             {gaformeba?.map(el => {
                                 return (
@@ -120,7 +122,7 @@ export const Calculator = () => {
                     </div>
                     <div className='col-6'>
                         <div>
-                            <p className={styles.calculator__forp}>გამოშვების წელი</p>
+                            <p className={styles.calculator__forp}>{t("calculator.year")}</p>
                             <select name="year" onChange={handleChange} className={styles.calculator__select} defaultValue={""}>
                                 <option disabled></option>
                                 <option disabled>2025</option>
@@ -131,7 +133,7 @@ export const Calculator = () => {
                     </div>
                     <div className='col-6'>
                         <div>
-                            <p className={styles.calculator__forp}>ძრავის მოცულობა</p>
+                            <p className={styles.calculator__forp}>{t("calculator.engine")}</p>
                             <select name="engine" onChange={handleChange} className={styles.calculator__select} defaultValue={""}>
                                 <option disabled></option>
                                 <option disabled>1</option>

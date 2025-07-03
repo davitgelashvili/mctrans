@@ -1,13 +1,17 @@
 import React from 'react'
 import styles from './styles.module.scss'
+import { useTranslation } from 'react-i18next';
 
 export const WorkInfo = () => {
+
+   const { t } = useTranslation();
+
   return (
     <div className={styles['footer__work']}>
-      <h3 className={styles['footer__title']}>Sale Hours</h3>
-      <p>Monday - Friday: 09:00AM - 09:00 PM</p>
-      <p>Saturday: 09:00AM - 07:00PM </p>
-      <p>Sunday: Closed</p> 
+      <h3 className={styles['footer__title']}>{t("footer.hour")}</h3>
+      <p>{t("footer.dro1")}</p>
+      <p>{t("footer.dro2")}</p>
+      <p>{t("footer.dro3")}</p> 
     </div>
   )
 }

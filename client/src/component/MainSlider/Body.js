@@ -10,16 +10,19 @@ import kutxisS from "../../assets/icons/kutxisshavi.svg"
 import kutxisT from "../../assets/icons/kutxis2.svg"
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 
 
 export default function Body() {
+    const { t } = useTranslation();
 
     const data = [
-        { link: "/test", icon: `${suv}`, name: "SUV" },
-        { link: "/test", icon: `${sedan}`, name: "Sedan" },
-        { link: "/test", icon: `${hatckback}`, name: "Hatckback" },
-        { link: "/test", icon: `${coupe}`, name: "Coupe" },
-        { link: "/test", icon: `${hybrid}`, name: "Hybrid" },
+        { link: "/test", icon: `${suv}`, name: t("mainsld.suv") },
+        { link: "/test", icon: `${sedan}`, name: t("mainsld.sedan") },
+        { link: "/test", icon: `${hatckback}`, name: t("mainsld.hatchback")  },
+        { link: "/test", icon: `${coupe}`, name: t("mainsld.coupe") },
+        { link: "/test", icon: `${hybrid}`, name: t("mainsld.hybrid")  },
     ]
 
     const navigate = useNavigate();
@@ -35,26 +38,25 @@ export default function Body() {
 
     return (
         <div className={styles.body}>
-            <p className={styles.tag1}>Find cars for sale and for rent near you</p>
+            <p className={styles.tag1}>{t("mainsld.tag1")}</p>
             <h1 className={styles.title}>
-                4,675 Vehicles
-                Available
+                {t("mainsld.title")}
             </h1>
             <div className={styles.btns}>
                 <CustomButton>
                     <p className={styles.btn} onClick={InventoryHandleClick}>
-                        View Inventory
+                        {t("mainsld.inventory")}
                         <img src={kutxisT} alt='icon' />
                     </p>
                 </CustomButton>
                 <CustomButton light>
                     <p className={`${styles.btn} `} onClick={ContactUsHandleClick}>
-                        Contact Us
+                        {t("mainsld.contact")}
                         <img src={kutxisS} alt='icon' />
                     </p>
                 </CustomButton>
             </div>
-            <p className={styles.tag2}>Or Browse Featured Model</p>
+            <p className={styles.tag2}>{t("mainsld.tag2")}</p>
             <div className={styles.features}>
                 {data.map((item) => {
                     return (

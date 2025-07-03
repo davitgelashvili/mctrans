@@ -13,12 +13,12 @@ export default function Menu() {
 
   const data = [
     { link: "/", title: t("menu.home") },
-    { link: "/news", title: t("menu.news") },
-    { link: "/cars", title: "MS Trans ლაუნჯი" },
-    { link: "/cars", title: "კატალოგები" },
-    { link: "/teams", title: "გაყიდვების გუნდი" },
-    { link: "/calculator", title: "განბაჟება" },
-    { link: "/vin", title: "VIN:ძებნა" },
+    { link: "/news", title: t("menu.news") }, 
+    { link: "/cars", title: t("menu.mstrans")},
+    { link: "/cars", title: t("menu.catalog") },
+    { link: "/teams", title: t("menu.salesteam") },
+    { link: "/calculator", title: t("menu.customcl") },
+    { link: "/vin", title:t("menu.vin") },
   ]
 
   return (
@@ -40,7 +40,7 @@ export default function Menu() {
         </button>
       </div>
 
-      <div className={`${isOpen ? "d-block" : "d-none"} d-lg-none`}>
+      <div className={`container ${isOpen ? "d-block" : "d-none"} d-lg-none`}>
         <div className={styles.header__open}>
           <div className={styles.header__boxrow}>
             {data?.map((item) => {

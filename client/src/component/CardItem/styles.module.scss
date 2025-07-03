@@ -21,13 +21,13 @@
   &__title {
     margin: 0;
     overflow: hidden;
-    padding: 17px 31px;
     text-overflow: ellipsis;
     color: #050B20;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 21px;
     text-wrap-mode: nowrap;
-    font-weight: 700;
+    font-weight: 500;
+    padding: 15px;
 
     &--team {
       background-color: #CEE1F2;
@@ -36,10 +36,6 @@
       align-items: center;
     }
 
-
-    @media (max-width: 1399px) {
-      padding: 15px;
-    }
 
     img {
       display: unset;
@@ -79,6 +75,10 @@
   gap: 15px;
   margin-inline: -15px;
   color: #050B20;
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 14px;
+
 }
 
 .btn {
@@ -130,11 +130,13 @@
 
   .cornerlink {
     position: absolute;
-    bottom: 25px;
-    right: 10px;
+    bottom: 20px;
+    right: 0px;
     color: #405FF2;
-    border-radius: 5px;
     text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 27.75px;
 
     &:hover {
       color: #0056b3;
@@ -142,6 +144,7 @@
 
     @media (max-width: 768px) {
       margin-right: -5px;
+      font-size: 13px;
     }
   }
 }
@@ -155,4 +158,11 @@
   @media (max-width: 768px) {
     margin-left: -10px;
   }
+}
+
+.kutxis {
+  margin-left: 5px;
+  width: 13px;
+  height: 13px;
+  margin-top: 3px;
 }

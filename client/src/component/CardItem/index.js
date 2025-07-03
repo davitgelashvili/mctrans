@@ -9,9 +9,12 @@ import vector from "../../assets/icons/Vector.svg"
 import isari from "../../assets/icons/isari.svg"
 import petrol from "../../assets/icons/petrol.svg"
 import kutxis from "../../assets/icons/kutxis.svg"
-
+import { useTranslation } from 'react-i18next';
 
 export const CardItem = ({ item, name }) => {
+
+    const { t } = useTranslation();
+
     return (
         <div className={styles.card}>
             <figure className={styles.card__cover}>
@@ -22,7 +25,7 @@ export const CardItem = ({ item, name }) => {
                 <img src={person} alt='person' />
                 {item?.name}
             </h1>}
-            {name === 'blogs' && <h1 className={`${styles.card__title} ${styles.mbview}`}>
+            {name === 'blogs' && <h1 className={`${styles.card__title}`}>
                 <Link to={`/news/${item._id}`}>{item?.title?.ka}</Link>
             </h1>} 
             <div className={styles.card__body}>
@@ -33,7 +36,7 @@ export const CardItem = ({ item, name }) => {
                 {item?.location && <div className="d-flex justify-content-center align-items-center"><CustomButton >
                     <Link to="/test" className={styles['btn__link']}>
                         <div className='d-flex justify-content-center align-items-center'>
-                            <p>მოგვწერეთ</p>
+                            <p>{t("carditem.write")}</p>
                         </div>
                     </Link>
                 </CustomButton></div>}
@@ -61,8 +64,7 @@ export const CardItem = ({ item, name }) => {
                 {item?.price && (
                     <div className={styles.Linkcontainer}>
                         <Link to="/test" className={styles.cornerlink}>
-                            View Details<img src={kutxis} alt='kutxis' style={{ position: "absolute", display: "inline-flex", 
-                                marginLeft: 5, width: 13, height: 13, marginTop: 3}}/>
+                            {t("carditem.details")}<img src={kutxis} alt='kutxis' className={styles.kutxis} style={{ display: "unset"}}/>
                         </Link>
                     </div>
                 )}
