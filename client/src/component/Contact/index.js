@@ -7,9 +7,10 @@ import contactimg1 from "../../assets/images/contactimg1.svg"
 import contactimg2 from "../../assets/images/contactimg2.svg"
 import contactimg3 from "../../assets/images/contactimg3.svg"
 import { CustomInput } from '../Common/CustomInput';
+import { useTranslation } from 'react-i18next';
 
 export const Contact = () => {
-
+    const { t } = useTranslation();
     const [values, setValues] = useState({
         fullname: "",
         phonenumber: "",
@@ -41,28 +42,27 @@ export const Contact = () => {
                 smallImage1={contactimg2}
                 smallImage2={contactimg3}
                 bigImage={contactimg1}
-                title="Fill Form">
+                title={t("contact.title")}>
                 <div>
-                    <p className={styles.contact__firstp}>One step closer to your new car! Just complete the short
-                        form and our sales manager will contact you shortly.</p>
+                    <p className={styles.contact__firstp}>{t("contact.firstp")}</p>
                     <CustomInput
                         type={'text'}
-                        title={'Full name'}
+                        title={t("contact.inputtitle1")}
                         name={'fullname'}
                         value={values.fullname}
-                        placeholder={'Enter your full name'}
+                        placeholder={t("contact.plcholder1")}
                         onChange={handleChange}
                     />
                     <CustomInput
                         type={'text'}
-                        title={'Phone number'}
+                        title={t("contact.inputtitle2")}
                         name={'phonenumber'}
                         value={values.phonenumber}
-                        placeholder={'Enter your phone number'}
+                        placeholder={t("contact.plcholder2")}
                         onChange={handleChange}
                     />
                     <CustomButton>
-                        <p className={styles.contact__btn} onClick={handleSubmit}>Submit Form</p>
+                        <p className={styles.contact__btn} onClick={handleSubmit}>{t("contact.submit")}</p>
                     </CustomButton>
                 </div>
             </Form>

@@ -14,6 +14,8 @@ import whyus from './../component/WhyUs/whyus.module'
 import lastblog from './../component/LastBlog/lastblog.module'
 import teams from './../component/Teams/teams.module'
 import cars from './../component/Cars/cars.module'
+import contact from './../component/Contact/contact.module'
+import benefits from './../component/Benefits/benefits.module'
 
 i18n
     .use(initReactI18next)
@@ -36,6 +38,8 @@ i18n
                     ...lastblog.en,
                     ...teams.en,
                     ...cars.en,
+                    ...contact.en,
+                    ...benefits.en,
                 }
             },
             ka: {
@@ -54,6 +58,8 @@ i18n
                     ...lastblog.ka,
                     ...teams.ka,
                     ...cars.ka,
+                    ...contact.ka,
+                    ...benefits.ka,
                 }
             },
             ru: {
@@ -72,6 +78,8 @@ i18n
                     ...lastblog.ru,
                     ...teams.ru,
                     ...cars.ru,
+                    ...contact.ru,
+                    ...benefits.ru,
                 }
             }
         }
