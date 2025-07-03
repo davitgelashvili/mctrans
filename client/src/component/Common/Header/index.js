@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { CustomButton } from '../CustomButton'
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 import { useTranslation } from 'react-i18next';
+import SelectLanguage from './SelectLanguage'
 
 export const Header = () => {
     const [isMenu, setIsMenu] = useState(true)
@@ -24,6 +25,9 @@ export const Header = () => {
                             {t("menu.send")}
                         </Link>
                     </CustomButton>
+                </div>
+                <div className="order-3">
+                    <SelectLanguage />
                 </div>
             </div>
         </header>
