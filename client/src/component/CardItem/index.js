@@ -10,10 +10,11 @@ import isari from "../../assets/icons/isari.svg"
 import petrol from "../../assets/icons/petrol.svg"
 import kutxis from "../../assets/icons/kutxis.svg"
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux'
 
 export const CardItem = ({ item, name }) => {
-
     const { t } = useTranslation();
+    const {language} = useSelector(state => state.translate)
 
     return (
         <div className={styles.card}>
@@ -26,11 +27,11 @@ export const CardItem = ({ item, name }) => {
                 {item?.name}
             </h1>}
             {name === 'blogs' && <h1 className={`${styles.card__title}`}>
-                <Link to={`/news/${item._id}`}>{item?.title?.ka}</Link>
+                <Link to={`/news/${item._id}`}>{item?.title?.[language]}</Link>
             </h1>} 
             <div className={styles.card__body}>
                 {/* blog description */}
-                {item?.desc && <div dangerouslySetInnerHTML={{ __html: item?.desc?.ka}}></div>}
+                {item?.desc && <div dangerouslySetInnerHTML={{ __html: item?.desc?.[language]}}></div>}
                 {item?.location && <div className={styles.icontext}><img src={pin} alt='pin' /><p>{item?.location}</p></div>}
                 {item?.location && <div className={styles.icontext}><img src={post} alt='post' /><p>sale@mctrans.ge</p></div>}
                 {item?.location && <div className="d-flex justify-content-center align-items-center"><CustomButton >
