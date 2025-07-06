@@ -26,7 +26,7 @@ export const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/contact', {
+            await axios.post('http://localhost:5001/api/mail', {
                 name: values.fullname,
                 phone: values.phonenumber,
             });
