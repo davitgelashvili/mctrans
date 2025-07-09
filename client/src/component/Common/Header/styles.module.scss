@@ -71,17 +71,13 @@
         cursor: pointer;
         text-decoration: none;
         color: black;
-        font-family: DM Sans;
         line-height: 43.87px;
         letter-spacing: 0%;
         text-align: center;
-        vertical-align: middle;
-
-
+      
         &:hover {
             color: #405FF2;
         }
-
 
     }
 
@@ -133,4 +129,12 @@
     @media (max-width: 1124px) {
         padding: 10px 0;
     }
+}
+
+.active {
+  color: #405FF2;
+}
+
+.Phoneactive {
+  background-color: #405FF2;
 }

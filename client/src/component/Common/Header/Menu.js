@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../../assets/images/logo.png"
 import burger from "../../../assets/icons/burger.svg"
 import ixsiki from "../../../assets/icons/ixsiki.svg"
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 
 export default function Menu() {
@@ -27,7 +27,7 @@ export default function Menu() {
         <div className='d-none d-lg-block'>
           {data?.map((item) => {
             return (
-              <Link className={styles.header__item} to={item.link} key={item.title}>{item.title}</Link>
+              <NavLink className={({ isActive }) =>`${styles.header__item} ${isActive ? styles.active : ''}`} to={item.link} key={item.title}>{item.title}</NavLink>
             )
           })}
         </div>
@@ -45,7 +45,7 @@ export default function Menu() {
           <div className={styles.header__boxrow}>
             {data?.map((item) => {
               return (
-                <Link onClick={() => setIsOpen(!isOpen)} className={styles.header__minibox} to={item.link} key={item.title}>{item.title}</Link>
+                <NavLink onClick={() => setIsOpen(!isOpen)} className={({ isActive }) =>`${styles.header__minibox} ${isActive ? styles.Phoneactive : ''}`} to={item.link} key={item.title}>{item.title}</NavLink>
               )
             })}
           </div>

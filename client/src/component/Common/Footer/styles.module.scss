@@ -46,12 +46,20 @@
 
             a {
                 text-decoration: none;
-                color: #000000;
                 font-weight: 500;
                 font-size: 15px;
                 line-height: 43.87px;
                 text-align: left;
+
+                &:hover {
+                    color: #405FF2;
+                }
             }
+
+        }
+
+        &--active {
+            color: #405FF2;
         }
     }
 
@@ -91,4 +99,9 @@
             }
         }
     }
+
+}
+
+.txtblack {
+    color: #000000;
 }
