@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { siteTranslateAction } from '../../../store/translate'
 import { useDispatch } from "react-redux";
 
-const   SelectLanguage = () => {
+const SelectLanguage = () => {
     const [select, setSelect] = useState('en')
     const [open, setOpen] = useState(false)
     const dispatch = useDispatch()

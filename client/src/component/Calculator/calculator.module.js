@@ -7,7 +7,7 @@ module.exports = {
             left: "Left",
             right: "Right",
             single: "Single",
-            double: "double",
+            double: "Double",
             cartype: "Car type",
             wheel: "Car steering wheel",
             decoration: "Car decoration",

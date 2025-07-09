@@ -61,7 +61,7 @@ export default function Body() {
                 {data.map((item) => {
                     return (
                         <CustomButton light>
-                            <Link to={item.link} className={styles.minibtn} key={item.name}><img src={item.icon} />
+                            <Link to={item.link} className={styles.minibtn} key={item.name}><img src={item.icon} className={styles.minibtn__img}/>
                                 {item.name}
                             </Link>
                         </CustomButton>
