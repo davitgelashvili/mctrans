@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 import { Form } from '../Form';
 import { CustomButton } from '../Common/CustomButton';
 import calcbigimg from "../../assets/images/calcbigimg.svg"
-import calcimg1 from "../../assets/images/calcimg1.svg"
+import containers from "../../assets/images/containers.svg"
 import calcimg2 from "../../assets/images/calcimg2.svg"
 import { CustomInput } from '../Common/CustomInput';
 import { useTranslation } from 'react-i18next';
@@ -26,7 +26,7 @@ export const VinSearch = () => {
     return (
         <div className={`${styles['vin']}`}>
             <Form
-                smallImage1={calcimg1}
+                smallImage1={containers}
                 smallImage2={calcimg2}
                 bigImage={calcbigimg}
                 title={t("vin.company")}>
