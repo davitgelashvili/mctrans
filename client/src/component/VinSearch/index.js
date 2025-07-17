@@ -7,6 +7,7 @@ import containers from "../../assets/images/containers.svg"
 import calcimg2 from "../../assets/images/calcimg2.svg"
 import { CustomInput } from '../Common/CustomInput';
 import { useTranslation } from 'react-i18next';
+import { Result } from './result';
 
 export const VinSearch = () => {
     const { t } = useTranslation();
@@ -125,6 +126,7 @@ export const VinSearch = () => {
                     )}
                 </div>
             </Form>
+            {response && <Result item={response} /> }
         </div>
     );
 };
