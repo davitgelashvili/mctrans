@@ -53,28 +53,25 @@ export const VinSearch = () => {
         setLoading(true);
 
         try {
-            const formData = new URLSearchParams();
-            if (vinTrimmed) {
-                formData.append("vincode", vinTrimmed);
-            } else {
-                formData.append("container", containerTrimmed);
-            }
-
-            const res = await fetch(`${process.env.REACT_APP_VIN_API_URL}`, {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/vincheck`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "X-Auth-Key": `${process.env.REACT_APP_AUTH_KEY}`
+                    "Content-Type": "application/json"
                 },
-                body: formData.toString()
+                body: JSON.stringify({
+                    vin: vinTrimmed,
+                    container: containerTrimmed
+                })
             });
 
-            const text = await res.text();
-            const cleanText = text.replace(/^\uFEFF/, ''); // remove BOM
-            const data = JSON.parse(cleanText);
+            if (!res.ok) {
+                throw new Error("სერვერის პასუხი არასწორია");
+            }
 
+            const data = await res.json();
             setResponse(data);
         } catch (err) {
+            console.error(err);
             setError("დაფიქსირდა შეცდომა. გთხოვ სცადე ხელახლა.");
         } finally {
             setLoading(false);
@@ -91,6 +88,7 @@ export const VinSearch = () => {
     return (
         <div className={`${styles['vin']}`}>
             <p>{ip && ip}</p>
+            {/* <button onClick={handleSubmit2}>test2 </button> */}
             <Form
                 smallImage1={containers}
                 smallImage2={calcimg2}
