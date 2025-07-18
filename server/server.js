@@ -29,6 +29,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.get('/api/ip', (req, res) => {
+    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
+    res.json({ ip })
+  })
+
 app.use("/api", mainrRouter);
 
 // React-ის ბილდის ფაილების სერვინგი

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import { Form } from '../Form';
 import { CustomButton } from '../Common/CustomButton';
@@ -11,6 +11,7 @@ import { Result } from './result';
 
 export const VinSearch = () => {
     const { t } = useTranslation();
+    const [ip, setIp] = useState('')
 
     const [values, setValues] = useState({
         vin: "",
@@ -80,8 +81,16 @@ export const VinSearch = () => {
         }
     };
 
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}/ip`)
+            .then(res => res.json())
+            .then(data => setIp(data.ip))
+            .catch(err => console.error(err))
+    }, [])
+
     return (
         <div className={`${styles['vin']}`}>
+            <p>{ip && ip}</p>
             <Form
                 smallImage1={containers}
                 smallImage2={calcimg2}
@@ -92,7 +101,7 @@ export const VinSearch = () => {
                 <div>
                     <p className={styles.vin__firstp}>{t("vin.info")}</p>
                     <p className={styles.vin__secondp}>{t("vin.code")}</p>
-                    
+
                     <CustomInput
                         type="text"
                         title={t("vin.title1")}
@@ -101,7 +110,7 @@ export const VinSearch = () => {
                         placeholder={t("vin.plholder1")}
                         onChange={handleChange}
                     />
-                    
+
                     <CustomInput
                         type="text"
                         title={t("vin.title2")}
@@ -126,7 +135,7 @@ export const VinSearch = () => {
                     )}
                 </div>
             </Form>
-            {response && <Result item={response} /> }
+            {response && <Result item={response} />}
         </div>
     );
 };
