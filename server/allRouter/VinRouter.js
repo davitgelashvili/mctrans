@@ -2,13 +2,14 @@ const express = require("express");
 const vinRouter = express.Router();
 require("dotenv").config();
 
+// ⚠️ დარწმუნდი, რომ app.js-ში გაქვს: express.json() და express.urlencoded()
+
 vinRouter.post("/", async (req, res) => {
   try {
     const { vin, container } = req.body;
-    
-    console.log(process.env.AUTH_KEY)
 
-    console.log("მიღებული მონაცემები:", { vin, container });
+    console.log("🔑 AUTH_KEY:", process.env.AUTH_KEY);
+    console.log("📦 მიღებული მონაცემები:", { vin, container });
 
     if (!vin && !container) {
       return res.status(400).json({ error: "VIN ან კონტეინერი საჭიროა." });
@@ -22,20 +23,22 @@ vinRouter.post("/", async (req, res) => {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        "X-Auth-Key": process.env.AUTH_KEY
+        "X-Auth-Key": process.env.AUTH_KEY,
       },
-      body: formData.toString()
+      body: formData.toString(),
     });
 
     const text = await fetchRes.text();
-    const cleanText = text.replace(/^\uFEFF/, ''); // BOM strip
 
-    console.log("API პასუხი:", cleanText);
+    console.log("📨 crude API პასუხი:", text);
+
+    const cleanText = text.replace(/^\uFEFF/, ''); // BOM strip
 
     const data = JSON.parse(cleanText);
     res.json(data);
+
   } catch (err) {
-    console.error("შეცდომა vincheck-ში:", err);
+    console.error("❌ შეცდომა vincheck-ში:", err.message);
     res.status(500).json({ error: "სერვერის შეცდომა." });
   }
 });
