@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 const cors = require("cors");
 require("dotenv").config();
+const os = require('os')
 
 const PORT = process.env.PORT || 5001;
 
@@ -30,9 +31,21 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get('/api/ip', (req, res) => {
-    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
-    res.json({ ip })
-  })
+    const interfaces = os.networkInterfaces()
+    let serverIp = 'unknown'
+
+    for (let iface of Object.values(interfaces)) {
+        for (let config of iface) {
+            if (config.family === 'IPv4' && !config.internal) {
+                serverIp = config.address
+                break
+            }
+        }
+        if (serverIp !== 'unknown') break
+    }
+
+    res.json({ ip: serverIp })
+})
 
 app.use("/api", mainrRouter);
 
