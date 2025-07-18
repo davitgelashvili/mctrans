@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5001;
 const allowedOrigins = [
     'http://localhost:3000',
     'http://localhost:5001',
-    'https://mctrans.ge'
+    '198.177.120.132'
 ];
 
 const corsOptions = {
