@@ -1,71 +1,90 @@
-const express = require('express');
-const mainrRouter = require('./router.js');
+const express = require("express");
+const mainrRouter = require("./router.js");
 const mongoose = require("mongoose");
-const path = require('path');
-const app = express();
+const path = require("path");
+const os = require("os");
 const cors = require("cors");
 require("dotenv").config();
-const os = require('os');
 
+const app = express();
 const PORT = process.env.PORT || 5001;
 
+// ✅ CORS whitelist
 const allowedOrigins = [
-    'http://localhost:3000',
-    'http://localhost:5001',
-    'http://198.177.120.132', // თუ ეს უნდა იყოს დომენი, http://-ით დაამატე
+    "http://localhost:3000",
+    "http://localhost:5001",
+    "http://198.177.120.132", // საჭიროებისამებრ დაამატე http:// ან https://
+    "https://mctrans.ge"
 ];
 
+// ✅ CORS კონფიგურაცია
 const corsOptions = {
     origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
+        if (!origin) return callback(null, true); // Server-to-server calls
+
+        const cleanedOrigin = origin.replace(/^https?:\/\/(www\.)?/, "http://");
+        const allowed = allowedOrigins.includes(cleanedOrigin);
+
+        if (allowed) {
+            return callback(null, true);
         } else {
-            callback(new Error('Not allowed by CORS'));
+            console.error("❌ Blocked by CORS:", origin);
+            return callback(new Error("Not allowed by CORS"));
         }
     },
-    credentials: true
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 };
 
-// --- MIDDLEWARE ---
+// ✅ Middleware-ები
 app.use(cors(corsOptions));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.options("*", cors(corsOptions)); // Preflight OPTIONS
 
-// --- ROUTES ---
-app.get('/api/ip', (req, res) => {
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
+
+// ✅ სერვერის IP გაშვების ტესტისთვის
+app.get("/api/ip", (req, res) => {
     const interfaces = os.networkInterfaces();
-    let serverIp = 'unknown';
+    let serverIp = "unknown";
+
     for (let iface of Object.values(interfaces)) {
         for (let config of iface) {
-            if (config.family === 'IPv4' && !config.internal) {
+            if (config.family === "IPv4" && !config.internal) {
                 serverIp = config.address;
                 break;
             }
         }
-        if (serverIp !== 'unknown') break;
+        if (serverIp !== "unknown") break;
     }
+
     res.json({ ip: serverIp });
 });
 
+// ✅ API როუტერები
 app.use("/api", mainrRouter);
 
-// React build serving
-app.use(express.static(path.join(__dirname, '../client/build')));
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+// ✅ React build ფაილების სერვინგი
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
-// --- SERVER START ---
-app.listen(PORT, () => {
-    console.log(`სერვერი აჭრილია პორტზე ${PORT}`);
-});
-
-// --- DATABASE CONNECTION ---
+// ✅ MongoDB კავშირი
 mongoose
-    .connect(process.env.MONGODB_URL)
+    .connect(process.env.MONGODB_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
     .then(() => {
-        console.log("Connected to MongoDB");
+        console.log("✅ Connected to MongoDB");
     })
     .catch((err) => {
-        console.log(err);
+        console.error("❌ MongoDB connection error:", err);
     });
+
+// ✅ სერვერის გაშვება
+app.listen(PORT, () => {
+    console.log(`🚀 Server is running on port ${PORT}`);
+});
