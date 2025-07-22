@@ -9,21 +9,35 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-// ✅ CORS whitelist
+// ✅ CORS whitelist (შეიტანე აქ რეალური ფრონტების მისამართები)
 const allowedOrigins = [
     "http://localhost:3000",
     "http://localhost:5001",
-    "http://198.177.120.132", // საჭიროებისამებრ დაამატე http:// ან https://
-    "https://mctrans.ge"
+    "http://198.177.120.132",
+    "https://mctrans.ge",
+    "https://www.mctrans.ge/"
 ];
+
+// ✅ origin normalize ფუნქცია (www და http/https იგნორით)
+function normalizeOrigin(origin) {
+    try {
+        const url = new URL(origin);
+        const hostname = url.hostname.replace(/^www\./, '');
+        return `https://${hostname}`;
+    } catch (err) {
+        return origin; // fallback
+    }
+}
 
 // ✅ CORS კონფიგურაცია
 const corsOptions = {
     origin: function (origin, callback) {
-        if (!origin) return callback(null, true); // Server-to-server calls
+        if (!origin) return callback(null, true); // Server-to-server, Postman, etc.
 
-        const cleanedOrigin = origin.replace(/^https?:\/\/(www\.)?/, "http://");
-        const allowed = allowedOrigins.includes(cleanedOrigin);
+        const normalized = normalizeOrigin(origin);
+        const allowed = allowedOrigins.some((allowedOrigin) =>
+            normalizeOrigin(allowedOrigin) === normalized
+        );
 
         if (allowed) {
             return callback(null, true);
@@ -38,12 +52,12 @@ const corsOptions = {
 
 // ✅ Middleware-ები
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // Preflight OPTIONS
+app.options("*", cors(corsOptions)); // OPTIONS preflight
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
-// ✅ სერვერის IP გაშვების ტესტისთვის
+// ✅ API: სერვერის IP-მისამართი
 app.get("/api/ip", (req, res) => {
     const interfaces = os.networkInterfaces();
     let serverIp = "unknown";
@@ -64,7 +78,7 @@ app.get("/api/ip", (req, res) => {
 // ✅ API როუტერები
 app.use("/api", mainrRouter);
 
-// ✅ React build ფაილების სერვინგი
+// ✅ React-ის ბილდის ფაილების სერვინგი
 app.use(express.static(path.join(__dirname, "../client/build")));
 
 app.get("*", (req, res) => {
