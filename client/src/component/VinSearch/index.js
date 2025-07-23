@@ -12,6 +12,7 @@ import { Result } from './result';
 export const VinSearch = () => {
     const { t } = useTranslation();
     const [ip, setIp] = useState('')
+    const [bigImage, setBigImage] = useState('')
 
     const [values, setValues] = useState({
         vin: "",
@@ -87,8 +88,7 @@ export const VinSearch = () => {
 
     return (
         <div className={`${styles['vin']}`}>
-            <p>{ip && ip}</p>
-            {/* <button onClick={handleSubmit2}>test2 </button> */}
+            {/* <p>{ip && ip}</p> */}
             <Form
                 smallImage1={containers}
                 smallImage2={calcimg2}
@@ -125,15 +125,14 @@ export const VinSearch = () => {
                             {loading ? "ძებნა..." : t("vin.search")}
                         </p>
                     </CustomButton>
-
-                    {response && (
-                        <pre style={{ marginTop: "20px", color: "#222", fontSize: "14px", backgroundColor: "#f5f5f5", padding: "10px", borderRadius: "5px" }}>
-                            {JSON.stringify(response, null, 2)}
-                        </pre>
-                    )}
                 </div>
             </Form>
-            {response && <Result item={response} />}
+            {response && <Result item={response} setBigImage={setBigImage} />}
+            {bigImage && (
+                <div className={`${styles['vin__bigimage']}`} onClick={()=>setBigImage('')}>
+                    <img src={bigImage} alt='img' />
+                </div>
+            )}
         </div>
     );
 };
