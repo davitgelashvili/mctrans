@@ -1,0 +1,56 @@
+.mainitem {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    &__arrow {
+        transition: transform 0.3s ease;
+        width: 12px;
+        align-items: center;
+        text-align: right;
+        display: flex;
+        margin: 0px;
+        padding-left: 15px;
+    }
+
+    .forimg{
+        width: 12px;
+        height: 21px;
+    }
+}
+
+.ourbtn {
+    background: transparent;
+    border: none;
+    padding: 0px 29px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    color: #050B20;
+
+
+    .forquestion {
+        padding: 11px;
+        margin: 0px;
+    }
+}
+
+.content {
+    padding: 0 20px 16px;
+    font-size: 14px;
+    background: #f8f9fa;
+    color: #333;
+    animation: fadeIn 0.3s ease;
+}
+
+.foranswer {
+    margin: 0px;
+    padding: 10px 5px;
+}

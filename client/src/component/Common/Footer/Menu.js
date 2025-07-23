@@ -21,7 +21,7 @@ export const Menu = () => {
     <ul className={`${styles['footer__menu']} d-flex flex-row flex-wrap`}>
       {data.map((item) => {
         return (
-          <li>
+          <li key={item.title}>
             <NavLink className={({ isActive }) => `${isActive ? styles['footer__menu--active'] : styles.txtblack}`} to={item.link}>{item.title}</NavLink>
           </li>
         )

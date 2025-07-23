@@ -60,8 +60,8 @@ export default function Body() {
             <div className={styles.features}>
                 {data.map((item) => {
                     return (
-                        <CustomButton light>
-                            <Link to={item.link} className={styles.minibtn} key={item.name}><img src={item.icon} className={styles.minibtn__img}/>
+                        <CustomButton light key={item.name}>
+                            <Link to={item.link} className={styles.minibtn}><img src={item.icon} className={styles.minibtn__img}/>
                                 {item.name}
                             </Link>
                         </CustomButton>

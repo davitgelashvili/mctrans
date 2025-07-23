@@ -16,6 +16,7 @@ import teams from './../component/Teams/teams.module'
 import cars from './../component/Cars/cars.module'
 import contact from './../component/Contact/contact.module'
 import benefits from './../component/Benefits/benefits.module'
+import askedquestions from './../component/AskedQuestions/askedquestions.module'
 
 i18n
     .use(initReactI18next)
@@ -40,6 +41,7 @@ i18n
                     ...cars.en,
                     ...contact.en,
                     ...benefits.en,
+                    ...askedquestions.en,
                 }
             },
             ka: {
@@ -60,6 +62,7 @@ i18n
                     ...cars.ka,
                     ...contact.ka,
                     ...benefits.ka,
+                    ...askedquestions.ka,
                 }
             },
             ru: {
@@ -80,6 +83,7 @@ i18n
                     ...cars.ru,
                     ...contact.ru,
                     ...benefits.ru,
+                    ...askedquestions.ru,
                 }
             }
         }

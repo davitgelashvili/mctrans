@@ -6,6 +6,7 @@ import { SalesManagers } from '../../component/SalesManagers'
 import { LastBlog } from '../../component/LastBlog'
 import { WhyUs } from '../../component/WhyUs'
 import { Benefits } from '../../component/Benefits'
+import AskedQuestions from '../../component/AskedQuestions'
 
 export default function MainPage() {
   return (
@@ -17,6 +18,7 @@ export default function MainPage() {
     <SalesManagers />
     <LastBlog />
     <WhyUs />
+    <AskedQuestions />
     </>
   )
 }
