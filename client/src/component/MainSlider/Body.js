@@ -58,10 +58,11 @@ export default function Body() {
             </div>
             <p className={styles.tag2}>{t("mainsld.tag2")}</p>
             <div className={styles.features}>
-                {data.map((item) => {
+                {data.map((item, index) => {
                     return (
-                        <CustomButton light key={item.name}>
-                            <Link to={item.link} className={styles.minibtn}><img src={item.icon} className={styles.minibtn__img}/>
+                        <CustomButton light key={index}>
+                            <Link to={item.link} className={styles.minibtn}>
+                                <img src={item.icon} className={styles.minibtn__img}/>
                                 {item.name}
                             </Link>
                         </CustomButton>
