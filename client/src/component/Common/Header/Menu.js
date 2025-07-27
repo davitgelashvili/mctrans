@@ -13,9 +13,8 @@ export default function Menu() {
 
   const data = [
     { link: "/", title: t("menu.home") },
+    { link: "/services", title: t("menu.services") },
     { link: "/news", title: t("menu.news") }, 
-    { link: "/cars", title: t("menu.mstrans")},
-    { link: "/cars", title: t("menu.catalog") },
     { link: "/teams", title: t("menu.salesteam") },
     { link: "/calculator", title: t("menu.customcl") },
     { link: "/vin", title:t("menu.vin") },

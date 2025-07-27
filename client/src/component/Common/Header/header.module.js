@@ -2,9 +2,8 @@ module.exports = {
     en: {
         menu: {
             home: 'Home',
+            services: 'Services',
             news: 'News',
-            mstrans: "MS Trans Lounge",
-            catalog: "Catalogs",
             salesteam: "Sales team",
             customcl: "Get Customs clearance",
             vin: "VIN:search",
@@ -15,9 +14,8 @@ module.exports = {
     ka: {
         menu: {
             home: 'მთავარი',
+            services: 'სერვისები',
             news: 'სიახლეები',
-            mstrans: "MS Trans ლაუნჯი",
-            catalog: "კატალოგები",
             salesteam: "გაყიდვების გუნდი",
             customcl: "განბაჟება",
             vin: "VIN:ძებნა",
@@ -27,9 +25,8 @@ module.exports = {
     ru: {
         menu: {
             home: 'основной',
+            services: 'услуги',
             news: 'новости',
-            mstrans: "MS Транс Лаундж",
-            catalog: "каталоги",
             salesteam: "отдел продаж",
             customcl: "таможенное оформление",
             vin: "VIN:Поиск",

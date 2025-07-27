@@ -42,6 +42,7 @@ const AskedQuestions = () => {
 
     return (
         <div className="container py-5">
+            <h3 className={styles.mainitem__title}>{t("askque.title")}</h3>
             <div className="row gy-4">
                 {items.map((item, index) => (
                     <div className="col-md-6" key={index}>

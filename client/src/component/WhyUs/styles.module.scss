@@ -2,6 +2,11 @@
 
     &__icon {
         margin: 0;
+
+        @media(max-width: 750px) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     }
 
     &__title {
@@ -13,9 +18,9 @@
 
     &__desc {
         margin: 0;
+        padding-top: 10px;
         font-weight: 400;
         font-size: 15px;
-        line-height: 27.75px;
-
+        
     }
 }
