@@ -67,7 +67,9 @@ export const Calculator = () => {
                 smallImage1={calcimg1}
                 smallImage2={calcimg2}
                 bigImage={calcbigimg}
-                title={t("calculator.calcul")}>
+                title={t("calculator.calcul")}
+                onSubmit={(e)=>e.preventDefault()}
+                >
                 <div className='row'>
                     <div className='col-12'>
                         <p className={styles.calculator__forp}>{t("calculator.cartype")}</p>
