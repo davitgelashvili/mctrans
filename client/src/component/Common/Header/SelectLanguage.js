@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { siteTranslateAction } from '../../../store/translate'
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const SelectLanguage = () => {
-    const [select, setSelect] = useState('en')
+    let { language } = useSelector(state => state.translate)
+    const [select, setSelect] = useState(language)
     const [open, setOpen] = useState(false)
     const dispatch = useDispatch()
+
+    console.log(language)
 
     function openSelect() {
         setOpen(!open)
@@ -36,9 +39,9 @@ const SelectLanguage = () => {
                         fontSize: '14px',
                         cursor: 'pointer'
                     }}>
-                    <p onClick={() => setSelect('ka')}>ka</p>
-                    <p onClick={() => setSelect('en')}>en</p>
-                    <p onClick={() => setSelect('ru')}>ru</p>
+                    {language != 'ka' && <p onClick={() => setSelect('ka')}>ka</p>}
+                    {language != 'en' && <p onClick={() => setSelect('en')}>en</p>}
+                    {language != 'ru' && <p onClick={() => setSelect('ru')}>ru</p>}
                 </div>
             )}
         </div>

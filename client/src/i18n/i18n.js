@@ -21,7 +21,7 @@ import askedquestions from './../component/AskedQuestions/askedquestions.module'
 i18n
     .use(initReactI18next)
     .init({
-        fallbackLng: 'en',
+        fallbackLng: 'ka',
         resources: {
             en: {
                 translation: {

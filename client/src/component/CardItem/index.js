@@ -14,13 +14,15 @@ import { useSelector } from 'react-redux'
 
 export const CardItem = ({ item, name }) => {
     const { t } = useTranslation();
-    const {language} = useSelector(state => state.translate)
+    const { language } = useSelector(state => state.translate)
 
     return (
         <div className={styles.card}>
-            <figure className={styles.card__cover}>
-                <img src={item?.cover} alt='ტესტ' />
-            </figure>
+            {item?.cover && (
+                <figure className={styles.card__cover}>
+                    <img src={item?.cover} alt='cover' />
+                </figure>
+            )}
             {name === 'cars' && <h1 className={styles.card__title}>{item?.title}</h1>}
             {name === 'teams' && <h1 className={`${styles['card__title']} ${styles['card__title--team']}`}>
                 <img src={person} alt='person' />
@@ -28,10 +30,10 @@ export const CardItem = ({ item, name }) => {
             </h1>}
             {name === 'blogs' && <h1 className={`${styles.card__title}`}>
                 <Link to={`/news/${item._id}`}>{item?.title?.[language]}</Link>
-            </h1>} 
+            </h1>}
             <div className={styles.card__body}>
                 {/* blog description */}
-                {item?.desc && <div dangerouslySetInnerHTML={{ __html: item?.desc?.[language]}}></div>}
+                {item?.desc && <div dangerouslySetInnerHTML={{ __html: item?.desc?.[language] }}></div>}
                 {item?.location && <div className={styles.icontext}><img src={pin} alt='pin' /><p>{item?.location}</p></div>}
                 {item?.location && <div className={styles.icontext}><img src={post} alt='post' /><p>sale@mctrans.ge</p></div>}
                 {item?.location && <div className="d-flex justify-content-center align-items-center"><CustomButton >
@@ -65,7 +67,7 @@ export const CardItem = ({ item, name }) => {
                 {item?.price && (
                     <div className={styles.Linkcontainer}>
                         <Link to="/test" className={styles.cornerlink}>
-                            {t("carditem.details")}<img src={kutxis} alt='kutxis' className={styles.kutxis} style={{ display: "unset"}}/>
+                            {t("carditem.details")}<img src={kutxis} alt='kutxis' className={styles.kutxis} style={{ display: "unset" }} />
                         </Link>
                     </div>
                 )}
