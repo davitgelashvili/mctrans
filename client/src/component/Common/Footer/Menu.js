@@ -9,7 +9,6 @@ export const Menu = () => {
 
   const data = [
     { link: "/", title: t("footer.home") },
-    { link: "/cars", title: t("footer.mstrans")},
     { link: "/teams", title: t("footer.salesteam")},
     { link: "/vin", title: t("footer.vin")},
     { link: "/news", title: t("footer.news")},

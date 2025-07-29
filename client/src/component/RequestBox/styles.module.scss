@@ -57,6 +57,14 @@
         @media (max-width: 1200px) {
             padding: 16px 30px;
         }
+
+        @media (max-width: 600px) {
+            padding: 10px 45px;
+        }
+
+        @media (max-width: 380px) {
+            padding: 8px 25px;
+        }
         
         img {
             display: "block";

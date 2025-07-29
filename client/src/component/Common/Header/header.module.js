@@ -2,6 +2,7 @@ module.exports = {
     en: {
         menu: {
             home: 'Home',
+            catalog: 'Catalog',
             services: 'Services',
             news: 'News',
             salesteam: "Sales team",
@@ -14,6 +15,7 @@ module.exports = {
     ka: {
         menu: {
             home: 'მთავარი',
+            catalog: 'კატალოგი',
             services: 'სერვისები',
             news: 'სიახლეები',
             salesteam: "გაყიდვების გუნდი",
@@ -25,6 +27,7 @@ module.exports = {
     ru: {
         menu: {
             home: 'основной',
+            catalog: 'каталог',
             services: 'услуги',
             news: 'новости',
             salesteam: "отдел продаж",

@@ -25,6 +25,10 @@
     @media (max-width: 1124px) {
         left: 35%;
     }
+
+    @media (max-width: 428px) {
+        left: 25%;
+    }
 }
 
 .rightbutton {
@@ -47,5 +51,9 @@
 
     @media (max-width: 1124px) {
         right: 35%;
+    }
+
+    @media (max-width: 428px) {
+        right: 25%;
     }
 }

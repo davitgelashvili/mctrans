@@ -63,7 +63,7 @@ export default function Body() {
                         <CustomButton light key={index}>
                             <Link to={item.link} className={styles.minibtn}>
                                 <img src={item.icon} className={styles.minibtn__img}/>
-                                {item.name}
+                                <p className={styles.minitxt}>{item.name}</p>
                             </Link>
                         </CustomButton>
                     )
