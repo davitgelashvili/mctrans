@@ -15,7 +15,7 @@ module.exports = {
     ka: {
         menu: {
             home: 'მთავარი',
-            catalog: 'კატალოგი',
+            catalog: 'კატალოგები',
             services: 'სერვისები',
             news: 'სიახლეები',
             salesteam: "გაყიდვების გუნდი",
