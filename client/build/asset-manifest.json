@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.85eefe1c.css",
-    "main.js": "/static/js/main.50e58093.js",
+    "main.css": "/static/css/main.6bb1c920.css",
+    "main.js": "/static/js/main.3c4c70bf.js",
     "static/js/453.258b012d.chunk.js": "/static/js/453.258b012d.chunk.js",
     "static/media/calcimg2.svg": "/static/media/calcimg2.4b8c64a2377e5811f98f2674141edc5e.svg",
     "static/media/contactimg1.svg": "/static/media/contactimg1.c03dc2cb29fef40cd02ce3b97bc4f187.svg",
@@ -10,7 +10,7 @@
     "static/media/containers.svg": "/static/media/containers.ff0a105508c53c8f9a53a26ad21134a4.svg",
     "static/media/contactimg3.svg": "/static/media/contactimg3.e1aab0f51b241fc6d3fe3446c67a8492.svg",
     "static/media/contactimg2.svg": "/static/media/contactimg2.2c47783c8b8fb7f19398c85663d0de52.svg",
-    "static/media/slider.png": "/static/media/slider.a2de5ef21752a81d1dd8.png",
+    "static/media/mainslider.png": "/static/media/mainslider.f5df7ad6d235b201dcfc.png",
     "static/media/logo.png": "/static/media/logo.7cb65fc85de732fa1b39.png",
     "static/media/Vector.svg": "/static/media/Vector.0f67133ed863869a422c710c3759ebab.svg",
     "static/media/hatchback.svg": "/static/media/hatchback.31a0a6d6c3abcb93bd2c4716818f2137.svg",
@@ -47,12 +47,12 @@
     "static/media/post.svg": "/static/media/post.dd248d4d2de30fdc3a8b7e9e4960d3f9.svg",
     "static/media/ixsiki.svg": "/static/media/ixsiki.4e066aa878407d5da6f28bcb0bc1cd53.svg",
     "static/media/burger.svg": "/static/media/burger.da8b62a69ef577643b6b67ab31c8ff09.svg",
-    "main.85eefe1c.css.map": "/static/css/main.85eefe1c.css.map",
-    "main.50e58093.js.map": "/static/js/main.50e58093.js.map",
+    "main.6bb1c920.css.map": "/static/css/main.6bb1c920.css.map",
+    "main.3c4c70bf.js.map": "/static/js/main.3c4c70bf.js.map",
     "453.258b012d.chunk.js.map": "/static/js/453.258b012d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.85eefe1c.css",
-    "static/js/main.50e58093.js"
+    "static/css/main.6bb1c920.css",
+    "static/js/main.3c4c70bf.js"
   ]
 }
