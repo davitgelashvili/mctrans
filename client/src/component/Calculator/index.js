@@ -126,8 +126,7 @@ export const Calculator = () => {
                         <div>
                             <p className={styles.calculator__forp}>{t("calculator.year")}</p>
                             <select name="year" onChange={handleChange} className={styles.calculator__select} defaultValue={""}>
-                                <option disabled></option>
-                                <option disabled>2025</option>
+                                <option></option>
                                 <option>2024</option>
                                 <option>2023</option>
                             </select>
@@ -137,8 +136,7 @@ export const Calculator = () => {
                         <div>
                             <p className={styles.calculator__forp}>{t("calculator.engine")}</p>
                             <select name="engine" onChange={handleChange} className={styles.calculator__select} defaultValue={""}>
-                                <option disabled></option>
-                                <option disabled>1</option>
+                                <option></option>
                                 <option>2.0</option>
                                 <option>2.5</option>
                             </select>
@@ -150,7 +148,7 @@ export const Calculator = () => {
                                 <p
                                     className={`${styles['calculator__btn']}`}
                                     onClick={() => setJami(Number(selected.cartype) + Number(selected.gaformeba) + Number(selected.sache))}>
-                                    {jami || '$'}
+                                    {`${jami} $ ` || '$'}
                                 </p>
                             </CustomButton>
                         </div>

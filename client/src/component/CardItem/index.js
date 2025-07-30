@@ -37,7 +37,7 @@ export const CardItem = ({ item, name }) => {
                 {item?.location && <div className={styles.icontext}><img src={pin} alt='pin' /><p>{item?.location}</p></div>}
                 {item?.location && <div className={styles.icontext}><img src={post} alt='post' /><p>sale@mctrans.ge</p></div>}
                 {item?.location && <div className="d-flex justify-content-center align-items-center"><CustomButton >
-                    <Link to="/test" className={styles['btn__link']}>
+                    <Link to="/contact" className={styles['btn__link']}>
                         <div className='d-flex justify-content-center align-items-center'>
                             <p>{t("carditem.write")}</p>
                         </div>
@@ -64,13 +64,13 @@ export const CardItem = ({ item, name }) => {
                         </p>
                     </div>
                 )}
-                {item?.price && (
+                {/* {item?.price && (
                     <div className={styles.Linkcontainer}>
-                        <Link to="/test" className={styles.cornerlink}>
+                        <Link to="" className={styles.cornerlink}>
                             {t("carditem.details")}<img src={kutxis} alt='kutxis' className={styles.kutxis} style={{ display: "unset" }} />
                         </Link>
                     </div>
-                )}
+                )} */}
             </div>
         </div>
     )

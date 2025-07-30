@@ -11,17 +11,17 @@ export default function Sidebar() {
             url: '/adminpanel'
         },
         {
-            _id: '2352gfef',
+            _id: 'gs344ds',
             title: 'მანქანები',
             url: '/adminpanel/cars'
         },
         {
-            _id: '2352gfef',
+            _id: 'dsgdfsg3vc',
             title: 'თანამშრომლები',
             url: '/adminpanel/teams'
         },
         {
-            _id: '2352gfef',
+            _id: 'bfdbfee5',
             title: 'ბლოგი',
             url: '/adminpanel/blogs'
         },
@@ -38,6 +38,9 @@ export default function Sidebar() {
     return (
         <div className={`${styles['sidebar']}`}>
             <ul className={`${styles['sidebar__menu']}`}>
+                <Link className={`${styles['sidebar__menu--link']}`} to={'/'} target='_blank'>
+                    <p className={`${styles['sidebar__menu--title']}`}>საიტზე გადასვლა</p>
+                </Link>
                 {data?.map((item) => {
                     return (
                         <li className={`${styles['sidebar__menu--item']}`} key={item._id} onClick={() => open(item._id)}>
@@ -46,21 +49,6 @@ export default function Sidebar() {
                                     <p className={`${styles['sidebar__menu--title']}`}>{item.title}</p>
                                 </Link>
                             )}
-                            {item.links && <p className={`${styles['sidebar__menu--title']}`}>{item.title}</p>}
-                            {item.links && openSection === item._id && (
-                                <ul className={`${styles['sidebar__menu']}`}>
-                                    {item?.links?.map((link) => {
-                                        return (
-                                            <li key={link.url} className={`${styles['sidebar__menu--item']}`}>
-                                                <Link className={`${styles['sidebar__menu--link']}`} to={link.url}>
-                                                    <p className={`${styles['sidebar__menu--title']}`}>{link.title}</p>
-                                                </Link>
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
-                            )
-                            }
                         </li>
                     )
                 })}

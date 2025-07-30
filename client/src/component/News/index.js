@@ -43,13 +43,6 @@ export const News = () => {
                                 </div>
                             )
                         })}
-                        {data?.map((item) => {
-                            return (
-                                <div className='col-12 col-md-6 col-lg-4 d-flex' key={item._id}>
-                                    <CardItem item={item} name="blogs"/>
-                                </div>
-                            )
-                        })}
                     </div>
             </div>
         </Section>
