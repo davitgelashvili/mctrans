@@ -45,7 +45,7 @@ const AskedQuestions = () => {
             <h3 className={styles.mainitem__title}>{t("askque.title")}</h3>
             <div className="row gy-4">
                 {items.map((item, index) => (
-                    <div className="col-md-6" key={index}>
+                    <div className="col-lg-6" key={index}>
                         <div className={styles.mainitem}>
                             <button
                                 className={`${styles.ourbtn}`}
