@@ -24,10 +24,11 @@ export const CardItem = ({ item, name }) => {
                 </figure>
             )}
             {name === 'cars' && <h1 className={styles.card__title}>{item?.title}</h1>}
-            {name === 'teams' && <h1 className={`${styles['card__title']} ${styles['card__title--team']}`}>
-                <img src={person} alt='person' />
-                {item?.name}
-            </h1>}
+            {name === 'teams' && <h1 className={`${styles['card__title']} ${styles['card__title--team']}`}> <img src={person} style={{ marginRight: '6px' }} alt='person' />{item?.name}</h1>}
+           
+           
+           
+           
             {name === 'blogs' && <h1 className={`${styles.card__title}`}>
                 <Link to={`/news/${item._id}`}>{item?.title?.[language]}</Link>
             </h1>}

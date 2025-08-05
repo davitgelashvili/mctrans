@@ -55,7 +55,7 @@ export default function TeamsList() {
 
     return (
         <div className={styles.blog}>
-            <Link to={'add'}>დამატება</Link>
+            <Link to={'add'} className={styles.blog__addBtn}>დამატება</Link>
             <div className='d-flex justify-content-between'>
                 <Item
                     title={'სახელი'}
