@@ -41,10 +41,10 @@ export const Teams = () => {
             <div className={`${styles['salesmanager']}`}>
                 {!data && <Loading />}
                 <div className='row'>
-                    {data?.map((item) => {
+                    {data?.map((item, index) => {
                         return (
                             <div className="col-12 col-md-6 col-lg-4">
-                                <CardItem item={item} name="teams" />
+                                <CardItem item={item} name="teams" key={index}/>
                             </div>
                         )
                     })}
