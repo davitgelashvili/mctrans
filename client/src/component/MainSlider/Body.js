@@ -18,21 +18,21 @@ export default function Body() {
     const { t } = useTranslation();
 
     const data = [
-        { link: "/test", icon: `${suv}`, name: t("mainsld.suv") },
-        { link: "/test", icon: `${sedan}`, name: t("mainsld.sedan") },
-        { link: "/test", icon: `${hatckback}`, name: t("mainsld.hatchback")  },
-        { link: "/test", icon: `${coupe}`, name: t("mainsld.coupe") },
-        { link: "/test", icon: `${hybrid}`, name: t("mainsld.hybrid")  },
+        { link: "", icon: `${suv}`, name: t("mainsld.suv") },
+        { link: "", icon: `${sedan}`, name: t("mainsld.sedan") },
+        { link: "", icon: `${hatckback}`, name: t("mainsld.hatchback") },
+        { link: "", icon: `${coupe}`, name: t("mainsld.coupe") },
+        // { link: "", icon: `${hybrid}`, name: t("mainsld.hybrid") },
     ]
 
     const navigate = useNavigate();
 
     const InventoryHandleClick = () => {
-        navigate('/cars'); 
+        navigate('/cars');
     };
 
     const ContactUsHandleClick = () => {
-        navigate('/contact'); 
+        navigate('/contact');
     };
 
 
@@ -57,18 +57,22 @@ export default function Body() {
                 </CustomButton>
             </div>
             <p className={styles.tag2}>{t("mainsld.tag2")}</p>
-            <div className={styles.features}>
-                {data.map((item, index) => {
-                    return (
-                        <CustomButton light key={index}>
-                            <Link to={item.link} className={styles.minibtn}>
-                                <img src={item.icon} className={styles.minibtn__img}/>
-                                <p className={styles.minitxt}>{item.name}</p>
-                            </Link>
-                        </CustomButton>
-                    )
-                })}
+           
+            <div className={styles.buttonWrapper}>
+                <div className={styles.features}>
+                    {data.map((item, index) => {
+                        return (
+                            <CustomButton light key={index}>
+                                <Link to={item.link} className={styles.minibtn}>
+                                    <img src={item.icon} className={styles.minibtn__img} />
+                                    <p className={styles.minitxt}>{item.name}</p>
+                                </Link>
+                            </CustomButton>
+                        )
+                    })}
+                </div>
             </div>
+            
         </div>
     )
 }
