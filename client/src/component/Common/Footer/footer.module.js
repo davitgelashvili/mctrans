@@ -10,7 +10,7 @@ module.exports = {
             vin: "VIN:search",
             hour: "Sale Hours",
             connect: "Connect With Us",
-            dro1: "Monday - Friday: 09:00AM - 09:00 PM",
+            dro1: "10:00AM - 07:00PM",
             dro2: "Saturday: 09:00AM - 07:00PM ",
             dro3: "Sunday: Closed",
         }
@@ -27,7 +27,7 @@ module.exports = {
             vin: "VIN:ძებნა",
             hour: "გაყიდვის საათები",
             connect: "დაკავშირება ჩვენთან",
-            dro1: "სატესტო",
+            dro1: "10:00 - 19:00",
             dro2: "სატესტო",
             dro3: "სატესტო",
         }
@@ -43,7 +43,7 @@ module.exports = {
             vin: "VIN:Поиск",
             hour: "Часы продаж",
             connect: "Свяжитесь с нами",
-            dro1: "тест",
+            dro1: "10:00 - 19:00",
             dro2: "тест",
             dro3: "тест",
         }
