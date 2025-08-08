@@ -3,9 +3,9 @@ import axios from 'axios'
 import styles from './styles.module.scss'
 import { Form } from '../Form';
 import { CustomButton } from '../Common/CustomButton';
-import contactimg1 from "../../assets/images/contactimg1.svg"
-import contactimg2 from "../../assets/images/contactimg2.svg"
-import contactimg3 from "../../assets/images/contactimg3.svg"
+import contactimg1 from "../../assets/images/ctcimg2.png"
+import contactimg2 from "../../assets/images/ctcimg1.png"
+import contactimg3 from "../../assets/images/ctcimg3.png"
 import { CustomInput } from '../Common/CustomInput';
 import { useTranslation } from 'react-i18next';
 

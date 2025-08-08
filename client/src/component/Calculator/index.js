@@ -3,9 +3,9 @@ import styles from './styles.module.scss'
 import { Form } from '../Form';
 import { Input } from './Input';
 import { CustomButton } from '../Common/CustomButton';
-import calcbigimg from "../../assets/images/calcbigimg.svg"
-import calcimg1 from "../../assets/images/calcimg1.svg"
-import calcimg2 from "../../assets/images/calcimg2.svg"
+import calcbigimg from "../../assets/images/imgtree.png"
+import calcimg1 from "../../assets/images/one.png"
+import calcimg2 from "../../assets/images/imagetwo.png"
 import { useTranslation } from 'react-i18next';
 
 
