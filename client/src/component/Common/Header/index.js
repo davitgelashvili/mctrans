@@ -19,16 +19,20 @@ export const Header = () => {
                 <div className="order-2 order-lg-1">
                     {isMenu && <Menu />}
                 </div>
-                <div className={`order-1 order-lg-2 ${styles.btnmobile}`}>
+                <div className={`order-1 order-lg-2 ${styles.btnmobile}`} style={{ display: "flex" }}>
                     <CustomButton >
                         <Link to={`/contact`} className={styles['header__btn--link']}>
                             {t("menu.send")}
                         </Link>
                     </CustomButton>
+                    <div style={{padding: "10px"}}>
+                        <SelectLanguage />
+                    </div>
+
                 </div>
-                <div className="order-3">
+                {/* <div   className="order-3">
                     <SelectLanguage />
-                </div>
+                </div> */}
             </div>
         </header>
     )
