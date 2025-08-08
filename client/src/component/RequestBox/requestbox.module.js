@@ -1,10 +1,10 @@
 module.exports = {
     en: {
         request: {
-            box1: 'test',
-            box2: 'test',
-            box1txt: "test",
-            box2txt: "test",
+            box1: 'Are you looking for a new car?',
+            box2: 'Become our dealer',
+            box1txt: "We are committed to providing our customers with outstanding service.",
+            box2txt: "Become an official dealer of our cars and stay satisfied with our service!",
             contact: "Send request",
         }
     },

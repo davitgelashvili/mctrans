@@ -2,14 +2,14 @@ module.exports = {
     en: {
         benefits: {
             title: "Our benefits",
-            title1: "70% co-financing with 0% surcharge.",
-            title2: "Insurance from auction photos",
-            title4: "Part pre-selection and retrieval",
+            title1: "70% co-financing with 0% surcharge",
+            title2: "Comprehensive car insurance",
+            title4: "Part selection and search",
             title3: "Selling a car",
-            benefit1: "Pay only 30% of the car price and take advantage of the exclusive MCTrans co-financing program",
-            benefit2: "The vehicle is fully insured during transportation by MCTrans, including the engine, gearbox, and interior. This guarantees your complete peace of mind!",
-            benefit3: "Sell the car we have delivered easily and safely, hand over the car to us, we will add it to the MCTrans car park, We will take care of its proper presentation and sale. You will not need to place advertisements or negotiate with buyers. We will do everything simply, transparently and in your best interests.",
-            benefit4: "Sell the car we have delivered easily and safely, hand over the car to us, we will add it to the MCTrans car park, We will take care of its proper presentation and sale. You will not need to place advertisements or negotiate with buyers. We will do everything simply, transparently and in your best interests.",
+            benefit1: "Pay 30% of the vehicle cost and take advantage of the exclusive co-financing program of MCTrans!",
+            benefit2: "Before entering the port, at each stage of transportation, the vehicle is fully insured by MCTrans, including the engine, gearbox, and even the interior. Therefore, with us, whatever you order, you get it!",
+            benefit3: "To create complete comfort for our loyal customers, the MCTrans team of experts will search for the desired car part in advance and help you purchase it both in the Georgian market and abroad!",
+            benefit4: "If you hand over a vehicle brought by MCTrans for sale, we will place it in the MCTrans parking and take care of the proper presentation and sale of the vehicle ourselves. You will no longer need to place advertisements on websites and talk to buyers, because at each stage of the negotiation, we will be the primary defender of your interests!",
         }
 
     },

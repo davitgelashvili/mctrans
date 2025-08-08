@@ -1,15 +1,15 @@
 module.exports = {
     en: {
         why: {
-            text: 'Why us ?',
-            title1: "Special Financing Offers",
-            title2: "Trusted Car Dealership",
-            title3: "Transparent Pricing",
-            title4: "Expert Car Service",
-            item1: "test",
-            item2: "test",
-            item3: "test",
-            item4: "test",
+            text: 'Advantages of MC Trans',
+            title1: "Transparent process",
+            title2: "Special offer for dealers",
+            title3: "Affordable prices",
+            title4: "Professional service 360°",
+            item1: "MCTrans customers know the cost of each service in advance, because there are no hidden fees or unexpected costs with us!",
+            item2: "As an authorized MCTrans dealer, you will gain access to leading American auctions: Copart, IAAI, CANADA MANHEIM, ADESA, PIPELINE, and will perform operations independently, without the intervention of a third party. A-grade add-on of McTrans provides lower rates and other extra benefits.",
+            item3: "With experienced professionals, it is possible to select a good car within any budget, and the service fee is optimally adjusted to the customer's financial situation.",
+            item4: "Team of experts at MCTrans will provide you with all the necessary information, help you select a vehicle, ensure the safe transportation of your purchase to our fleet, and, if necessary, will even take care of the disposal of the vehicle!",
         }
 
     },
